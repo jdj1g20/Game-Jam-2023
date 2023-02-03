@@ -1,0 +1,625 @@
+{
+    "events": [
+      {
+        "description": "The rat miners are threatening to go on strike if their working conditions are not improved.",
+        "advisor": "economyA",
+        "SFX": "",
+        "decision1Desc": "Fine, give them what they want",
+        "decision1": {
+          "description": "The miners happily got back to work after being provided higher quality cheese supplies.",
+          "stat1": "approval",
+          "stat1Amount": "2",
+          "stat2": "food",
+          "stat2Amount": "-1",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "Send the army in to make an example of the troublemakers.",
+        "decision2": {
+          "description": "The main troublemakers were executed and the rest of the miners quickly got back to their work.",
+          "stat1": "approval",
+          "stat1Amount": "-2",
+          "stat2": "economy",
+          "stat2Amount": "1",
+          "SFX": "ApprovalMinus"
+        }
+      },
+      {
+        "description": "There is an outbreak of deadly rat flu in the capital. How shall we deal with it?",
+        "advisor": "economyA",
+        "SFX": "",
+        "decision1Desc": "Pay foreign dog-ctors to treat the population.",
+        "decision1": {
+          "description": "At a price, the dog practitioners saved the city from the worst of the flu.",
+          "stat1": "approval",
+          "stat1Amount": "2",
+          "stat2": "economy",
+          "stat2Amount": "-2",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "Round up and execute any rat that sneezes.",
+        "decision2": {
+          "description": "It was a cruel but effective solution. The flu is gone, but at great cost of rat lives.",
+          "stat1": "military",
+          "stat1Amount": "1",
+          "stat2": "approval",
+          "stat2Amount": "-2",
+          "SFX": "ApprovalMinus"
+        }
+      },
+      {
+        "description": "There has been a deficit of cheese in recent times. Many rats are starving as they can't afford the inflated price. Should we hand out some of the cheese from your private collection?",
+        "advisor": "foodA",
+        "SFX": "",
+        "decision1Desc": "Very well, let them have my cheese",
+        "decision1": {
+          "description": "Your subjects praise you for your charity, but your cheese supplies are getting low.",
+          "stat1": "approval",
+          "stat1Amount": "1",
+          "stat2": "food",
+          "stat2Amount": "-2",
+          "SFX": "FoodMinus"
+        },
+        "decision2Desc": "Let them starve.",
+        "decision2": {
+          "description": "Your subjects are taken aback by your greed!",
+          "stat1": "approval",
+          "stat1Amount": "-2",
+          "stat2": "food",
+          "stat2Amount": "1",
+          "SFX": "ApprovalMinus"
+        }
+      },
+      {
+        "description": "A rich princess in a foreign land is looking for a partner. You could offer your hand in marriage.",
+        "advisor": "economyA",
+        "SFX": "ApprovalMinus",
+        "decision1Desc": "Let us share love and land!",
+        "decision1": {
+          "description": "Your subjects disapprove but your coffers overflow.",
+          "stat1": "approval",
+          "stat1Amount": "-1",
+          "stat2": "economy",
+          "stat2Amount": "2",
+          "SFX": "EconomyPlus"
+        },
+        "decision2Desc": "I don't need to marry.",
+        "decision2": {
+          "description": "Your people respect your resolve.",
+          "stat1": "approval",
+          "stat1Amount": "2",
+          "stat2": "economy",
+          "stat2Amount": "-1",
+          "SFX": "EconomyMinus"
+        }
+      },
+      {
+        "description": "We have been asked to open our borders to some rich dog merchants.",
+        "advisor": "economyA",
+        "SFX": "ApprovalMinus",
+        "decision1Desc": "Let gold flow into the empire!",
+        "decision1": {
+          "description": "Your military becomes overwhelmed by the influx of outsiders, but the empire prospers.",
+          "stat1": "military",
+          "stat1Amount": "-2",
+          "stat2": "economy",
+          "stat2Amount": "1",
+          "SFX": "MillitaryMinus"
+        },
+        "decision2Desc": "I would not take their tacky wares in 1000 years!",
+        "decision2": {
+          "description": "Your generals approve, but at the price of growing your coffers.",
+          "stat1": "military",
+          "stat1Amount": "2",
+          "stat2": "economy",
+          "stat2Amount": "-1",
+          "SFX": "EconomyMinus"
+        }
+      },
+      {
+        "description": "A large amount of flooding has occurred across the kingdom and many rats are stranded in different locations.",
+        "advisor": "economyA",
+        "SFX": "",
+        "decision1Desc": "Evacuate the people!",
+        "decision1": {
+          "description": "The civilians are thankful for your quick actions, but the army suffered some casualties.",
+          "stat1": "approval",
+          "stat1Amount": "2",
+          "stat2": "military",
+          "stat2Amount": "-1",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "Evacuate the army!",
+        "decision2": {
+          "description": "The majority of the army are able to rescue their equipment before losing it to the flood, however some civilians died in their homes after being abandoned.",
+          "stat1": "approval",
+          "stat1Amount": "-1",
+          "stat2": "military",
+          "stat2Amount": "2",
+          "SFX": "MillitaryPlus"
+        }
+      },
+      {
+        "description": "The indigenous population who live near our remotest island territory are sabotaging our supply lines.",
+        "advisor": "economyA",
+        "SFX": "",
+        "decision1Desc": "We shall satisfy them with gifts of gold.",
+        "decision1": {
+          "description": "The generals warn you that you haven't prevented the problem, but at least you still rule the territory.",
+          "stat1": "military",
+          "stat1Amount": "-1",
+          "stat2": "food",
+          "stat2Amount": "2",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "We must execute them all for their actions!",
+        "decision2": {
+          "description": "The generals salute your decisive action, but the territory is plagued by guerrilla warfare.",
+          "stat1": "military",
+          "stat1Amount": "1",
+          "stat2": "economy",
+          "stat2Amount": "-2",
+          "SFX": "EconomyMinus"
+        }
+      },
+      {
+        "description": "You spent all of your money on a golden throne, how will you pay your soldiers?",
+        "advisor": "economyA",
+        "SFX": "",
+        "decision1Desc": "Tax the people more.",
+        "decision1": {
+          "description": "The population begrudgingly hand over their meagre valuables.",
+          "stat1": "approval",
+          "stat1Amount": "-1",
+          "stat2": "military",
+          "stat2Amount": "1",
+          "SFX": "MillitaryPlus"
+        },
+        "decision2Desc": "Pillage some trade caravans.",
+        "decision2": {
+          "description": "The cat empire is furious at your actions and cancel your trade deal.",
+          "stat1": "military",
+          "stat1Amount": "2",
+          "stat2": "diplomacy",
+          "stat2Amount": "-2",
+          "SFX": "DiplomacyMinus"
+        }
+      },
+      {
+        "description": "Mice have been forming an insurgency against you for hoarding all the cheese and leaving none for them! How should we deal with them?",
+        "advisor": "foodA",
+        "SFX": "",
+        "decision1Desc": "Let them have some of my cheese.",
+        "decision1": {
+          "description": "They seem content with your offer and stop their rebellion.",
+          "stat1": "approval",
+          "stat1Amount": "2",
+          "stat2": "food",
+          "stat2Amount": "-2",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "Send the army in to deal with them!",
+        "decision2": {
+          "description": "The military takes decisive action against the mouse population. It is likely that some innocent rats got killed in the crossfire.",
+          "stat1": "diplomacy",
+          "stat1Amount": "-2",
+          "stat2": "military",
+          "stat2Amount": "1",
+          "SFX": "MillitaryPlus"
+        }
+      },
+      {
+        "description": "The sewer miners found a valuable ring that dates back centuries flushed down into our sewers. What should we do with it?",
+        "advisor": "economyA",
+        "SFX": "",
+        "decision1Desc": "Sell it and invest the money into my subjects.",
+        "decision1": {
+          "description": "The people sing your name in the streets.",
+          "stat1": "approval",
+          "stat1Amount": "2",
+          "stat2": "diplomacy",
+          "stat2Amount": "-1",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "Gift it to the ruler of the Cat Kingdom",
+        "decision2": {
+          "description": "They are thrilled by your gift.",
+          "stat1": "diplomacy",
+          "stat1Amount": "2",
+          "stat2": "approval",
+          "stat2Amount": "-1",
+          "SFX": "DiplomacyPlus"
+        }
+      },
+      {
+        "description": "The rats of the eastern provinces have been plagued by constant pigeon attacks, what should we do about them?",
+        "advisor": "militaryA",
+        "SFX": "",
+        "decision1Desc": "Send in the army.",
+        "decision1": {
+          "description": "Catastrophic losses have occurred on both sides, but the pigeons have backed down.",
+          "stat1": "military",
+          "stat1Amount": "-2",
+          "stat2": "approval",
+          "stat2Amount": "1",
+          "SFX": "MillitaryMinus"
+        },
+        "decision2Desc": "Leave them, they're only pigeons after all!",
+        "decision2": {
+          "description": "The pigeons made off with a large amount of money, but it turns out that their droppings have enriched our farmland!",
+          "stat1": "economy",
+          "stat1Amount": "-2",
+          "stat2": "food",
+          "stat2Amount": "2",
+          "SFX": "FoodPlus"
+        }
+      },
+      {
+        "description": "The sewers are not providing enough cheese for our land, but the neighbouring Mouse Kingdom seems to have a lot of surplus cheese. What should we offer in return for their cheese?",
+        "advisor": "foodA",
+        "SFX": "",
+        "decision1Desc": "Offer them money.",
+        "decision1": {
+          "description": "The mice graciously accept our offer.",
+          "stat1": "economy",
+          "stat1Amount": "-1",
+          "stat2": "food",
+          "stat2Amount": "2",
+          "SFX": "EconomyMinus"
+        },
+        "decision2Desc": "Offer them some tasty crackers.",
+        "decision2": {
+          "description": "The mice are offended by our 'inferior' crackers and refuse to trade their cheese.",
+          "stat1": "economy",
+          "stat1Amount": "1",
+          "stat2": "food",
+          "stat2Amount": "-1",
+          "SFX": "FoodMinus"
+        }
+      },
+      {
+        "description": "There have been reports about rat children causing havoc in the capital. Should we round them up?",
+        "advisor": "civilA",
+        "SFX": "",
+        "decision1Desc": "They're only children, leave them alone.",
+        "decision1": {
+          "description": "Your subjects are pleased with your humility, but I'm sure my gold pouch has gone missing...",
+          "stat1": "economy",
+          "stat1Amount": "-1",
+          "stat2": "approval",
+          "stat2Amount": "2",
+          "SFX": "EconomyMinus"
+        },
+        "decision2Desc": "Get them all!",
+        "decision2": {
+          "description": "We put the troublemakers in prison and have recieved many generous offers by their families to have them released!",
+          "stat1": "approval",
+          "stat1Amount": "-2",
+          "stat2": "economy",
+          "stat2Amount": "1",
+          "SFX": "EconomyPlus"
+        }
+      },
+      {
+        "description": "We suspect that the Cat Kingdom has been polluting the river that runs through the capital, which is our main source of fresh water. Shall we confront them about it?",
+        "advisor": "foodA",
+        "SFX": "",
+        "decision1Desc": "Leave the cats be.",
+        "decision1": {
+          "description": "It turns out that the pollution was being caused by a landslide upstream. It has been cleared up by the army.",
+          "stat1": "food",
+          "stat1Amount": "2",
+          "stat2": "military",
+          "stat2Amount": "-1",
+          "SFX": "FoodPlus"
+        },
+        "decision2Desc": "Accuse the cats.",
+        "decision2": {
+          "description": "The cat kingdom claims to have no knowledge of the blockages upstream, but the pollution disappears after a few days.",
+          "stat1": "diplomacy",
+          "stat1Amount": "-2",
+          "stat2": "food",
+          "stat2Amount": "2",
+          "SFX": "DiplomacyMinus"
+        }
+      },
+      {
+        "description": "A mysterious assailant has sabotaged the prison. All the prisoners have escaped and are stealing everything they can find!",
+        "advisor": "militaryA",
+        "SFX": "",
+        "decision1Desc": "Protect the citizens' property!",
+        "decision1": {
+          "description": "The people thank you for saving many family heirlooms, but the prisoners make off with lots of your gold.",
+          "stat1": "economy",
+          "stat1Amount": "-2",
+          "stat2": "approval",
+          "stat2Amount": "2",
+          "SFX": "EconomyPlus"
+        },
+        "decision2Desc": "Secure my gold!",
+        "decision2": {
+          "description": "The prisoners target the undefended citizens, but don't make off with anything valuable.",
+          "stat1": "economy",
+          "stat1Amount": "1",
+          "stat2": "approval",
+          "stat2Amount": "-2",
+          "SFX": "ApprovalMinus"
+        }
+      },
+      {
+        "description": "There have been reports that your army has been pillaging and looting in the distant provinces.",
+        "advisor": "civilA",
+        "SFX": "",
+        "decision1Desc": "Chastise the generals of the army.",
+        "decision1": {
+          "description": "The reports promptly stop, but the generals are not happy.",
+          "stat1": "approval",
+          "stat1Amount": "2",
+          "stat2": "military",
+          "stat2Amount": "-1",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "Leave the army be.",
+        "decision2": {
+          "description": "The reports go on, but you mysteriously receive a large gold payment.",
+          "stat1": "approval",
+          "stat1Amount": "-1",
+          "stat2": "economy",
+          "stat2Amount": "2",
+          "SFX": "EconomyPlus"
+        }
+      },
+      {
+        "description": "The controversial ratting festival is scheduled to take place where rats burn effigies of cats, their historic predators. I doubt the Cat Kingdom would be pleased if it went ahead.",
+        "advisor": "catA",
+        "SFX": "",
+        "decision1Desc": "Let the people celebrate.",
+        "decision1": {
+          "description": "The people are pleased they get to carry out their ancestral tradition, but the cats are offended by the event.",
+          "stat1": "approval",
+          "stat1Amount": "1",
+          "stat2": "diplomacy",
+          "stat2Amount": "-2",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "Ban the event.",
+        "decision2": {
+          "description": "The cats are thrilled you have stopped this desecration of their culture, but the people are not happy.",
+          "stat1": "diplomacy",
+          "stat1Amount": "2",
+          "stat2": "approval",
+          "stat2Amount": "-2",
+          "SFX": "DiplomacyPlus"
+        }
+      },
+      {
+        "description": "There is a rumour that a beautiful princess is being held hostage nearby to the capital. Will you rescue her?",
+        "advisor": "civilA",
+        "SFX": "",
+        "decision1Desc": "I shall rush to her rescue!",
+        "decision1": {
+          "description": "The princess turned out to just be a frog, however they are very grateful to you for rescuing them.",
+          "stat1": "diplomacy",
+          "stat1Amount": "2",
+          "stat2": "military",
+          "stat2Amount": "-1",
+          "SFX": "DiplomacyPlus"
+        },
+        "decision2Desc": "Let her rot.",
+        "decision2": {
+          "description": "She served us no purpose anyway.",
+          "stat1": "diplomacy",
+          "stat1Amount": "-1",
+          "stat2": "military",
+          "stat2Amount": "2",
+          "SFX": "DiplomacyPlus"
+        }
+      },
+      {
+        "description": "We would like to build a school in the capital for the use of the populace.",
+        "advisor": "civilA",
+        "SFX": "",
+        "decision1Desc": "Education should be available to all!",
+        "decision1": {
+          "description": "Thank you! We will start construction immediately! I assume you are fine paying the construction fees?",
+          "stat1": "approval",
+          "stat1Amount": "1",
+          "stat2": "economy",
+          "stat2Amount": "-2",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "That sounds far too civilised for us rats.",
+        "decision2": {
+          "description": "Very well, I shall redirect the money we saved up for the school into the kingdom's funds.",
+          "stat1": "economy",
+          "stat1Amount": "2",
+          "stat2": "approval",
+          "stat2Amount": "-1",
+          "SFX": "EconomyPlus"
+        }
+      },
+      {
+        "description": "Your castle is meagre compared to those of other kings.",
+        "advisor": "militaryA",
+        "SFX": "",
+        "decision1Desc": "Purchase new fortifications.",
+        "decision1": {
+          "description": "No one would dare attack now!",
+          "stat1": "military",
+          "stat1Amount": "2",
+          "stat2": "economy",
+          "stat2Amount": "-2",
+          "SFX": "MillitaryPlus"
+        },
+        "decision2Desc": "Spend the money on the people instead.",
+        "decision2": {
+          "description": "Your people thank you for your generosity",
+          "stat1": "food",
+          "stat1Amount": "2",
+          "stat2": "economy",
+          "stat2Amount": "-1",
+          "SFX": "EconomyPlus"
+        }
+      },
+      {
+        "description": "The generals are demanding more troops!",
+        "advisor": "militaryA",
+        "SFX": "",
+        "decision1Desc": "Issue a conscription policy",
+        "decision1": {
+          "description": "We have increased the size of the army, but many rats are not happy about it.",
+          "stat1": "military",
+          "stat1Amount": "2",
+          "stat2": "approval",
+          "stat2Amount": "-2",
+          "SFX": "MillitaryPlus"
+        },
+        "decision2Desc": "The army has enough troops!",
+        "decision2": {
+          "description": "Fewer troops means more rats to be employed by the farms.",
+          "stat1": "food",
+          "stat1Amount": "2",
+          "stat2": "military",
+          "stat2Amount": "-1",
+          "SFX": "FoodPlus"
+        }
+      },
+      {
+        "description": "One of our enemies, the pigeon nation, is becoming too large, I suggest that we launch some small attacks on their trade routes.",
+        "advisor": "militaryA",
+        "SFX": "",
+        "decision1Desc": "I'm sure they won't miss a trade caravan, or two.",
+        "decision1": {
+          "description": "The neighbouring Cat Kingdom is upset at your warmongering, but we steal a sizeable amount of food.",
+          "stat1": "diplomacy",
+          "stat1Amount": "-1",
+          "stat2": "food",
+          "stat2Amount": "2",
+          "SFX": "FoodPlus"
+        },
+        "decision2Desc": "We will leave them alone.",
+        "decision2": {
+          "description": "The economy flourishes, but the pigeons grow ever stronger and their skirmishes on our supply lines continue.",
+          "stat1": "economy",
+          "stat1Amount": "2",
+          "stat2": "food",
+          "stat2Amount": "-1",
+          "SFX": "EconomyPlus"
+        }
+      },
+      {
+        "description": "A battle for the succession to the Barony of the Bush has arisen. How should we stop the fighting?",
+        "advisor": "civilA",
+        "SFX": "",
+        "decision1Desc": "Seize the land and give it to the common rats.",
+        "decision1": {
+          "description": "The people praise you for your charity, but this significantly decreases the tax revenues from this region.",
+          "stat1": "economy",
+          "stat1Amount": "-1",
+          "stat2": "approval",
+          "stat2Amount": "1",
+          "SFX": "EconomyMinus"
+        },
+        "decision2Desc": "Sell the land and title to the highest bidder.",
+        "decision2": {
+          "description": "The land sold for a nice profit, but the Baron's successors are disappointed to lose their birth-right.",
+          "stat1": "economy",
+          "stat1Amount": "1",
+          "stat2": "approval",
+          "stat2Amount": "-1",
+          "SFX": "EconomyPlus"
+        }
+      },
+      {
+        "description": "The villagers to the south have not been blessed with a royal visit in decades. Will you grace them with your presence?",
+        "advisor": "civilA",
+        "SFX": "",
+        "decision1Desc": "I will personally attend.",
+        "decision1": {
+          "description": "The villagers hail you and have a new found respect for your supreme authority. They arrange a great feast in your honour.",
+          "stat1": "approval",
+          "stat1Amount": "2",
+          "stat2": "food",
+          "stat2Amount": "-1",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "I will send the general in my stead.",
+        "decision2": {
+          "description": "The general misunderstood and ransacked the village! At least it will be a good payday.",
+          "stat1": "economy",
+          "stat1Amount": "1",
+          "stat2": "approval",
+          "stat2Amount": "-1",
+          "SFX": "ApprovalMinus"
+        }
+      },
+      {
+        "description": "The crowd is throwing eggs at the royal procession.",
+        "advisor": "militaryA",
+        "SFX": "",
+        "decision1Desc": "Blame it on the cats.",
+        "decision1": {
+          "description": "The Cat Kingdom is insulted by your ignorance.",
+          "stat1": "approval",
+          "stat1Amount": "1",
+          "stat2": "diplomacy",
+          "stat2Amount": "-1",
+          "SFX": "ApprovalPlus"
+        },
+        "decision2Desc": "Send in the army.",
+        "decision2": {
+          "description": "The insurrection was put down swiftly, much to the delight of your generals.",
+          "stat1": "military",
+          "stat1Amount": "1",
+          "stat2": "approval",
+          "stat2Amount": "-1",
+          "SFX": "ApprovalMinus"
+        }
+      },
+      {
+        "description": "It has been a while since you have sent a delegation to the neighbouring kingdoms. A small gift of gold can go a long way.",
+        "advisor": "catA",
+        "SFX": "",
+        "decision1Desc": "I’d rather save our gold for something useful.",
+        "decision1": {
+          "description": "Your relations suffer, but at least gold will always be your friend.",
+          "stat1": "economy",
+          "stat1Amount": "2",
+          "stat2": "diplomacy",
+          "stat2Amount": "-1",
+          "SFX": "EconomyPlus"
+        },
+        "decision2Desc": "We can afford to sent a small gift.",
+        "decision2": {
+          "description": "The neighbouring kingdoms send their thanks.",
+          "stat1": "economy",
+          "stat1Amount": "-2",
+          "stat2": "diplomacy",
+          "stat2Amount": "2",
+          "SFX": "EconomyMinus"
+        }
+      },
+      {
+        "description": "There has been an earthquake and we risk losing this harvest if we don't act now, however there are many rats who also need your help! Which do we prioritise?",
+        "advisor": "foodA",
+        "SFX": "",
+        "decision1Desc": "Save the harvest!",
+        "decision1": {
+          "description": "The harvest was saved, but lots of buildings fell down and crushed rats in their own homes.",
+          "stat1": "food",
+          "stat1Amount": "2",
+          "stat2": "approval",
+          "stat2Amount": "-1",
+          "SFX": "FoodPlus"
+        },
+        "decision2Desc": "Protect the people!",
+        "decision2": {
+          "description": "Many rats were saved from buildings collapsing, however lots of the harvest was crushed and is now unedible.",
+          "stat1": "food",
+          "stat1Amount": "-2",
+          "stat2": "approval",
+          "stat2Amount": "1",
+          "SFX": "FoodMinus"
+        }
+      }
+    ]
+  }

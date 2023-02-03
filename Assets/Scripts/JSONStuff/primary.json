@@ -1,0 +1,391 @@
+{
+    "mainEvents": [
+        {
+            "description": "Your highness, the Cat Kingdom is in disarray after losing their Queen. The late Queen Whiskers' son, Meowthew, has claimed the throne, however there are a lot of cats who believe that his younger brother, Purrcival, would be better suited to rule. King Meowthew has sent a message asking for aid from Ratopolis in the form of food packages, despite our strained relations. Will you send this aid?",
+            "advisor": "catA",
+            "SFX": "",
+            "decision1Desc": "We will send him aid!",
+            "decision1Next": 1,
+            "decision1": {
+                "description": "The food that you've given was received and put to good use, King Meowthew sends his thanks.",
+                "stat1": "food",
+                "stat1Amount": -2,
+                "stat2": "diplomacy",
+                "stat2Amount": 2,
+                "SFX": "DiplomacyPlus"
+
+            },
+            "decision2Desc": "We cannot spare any food.",
+            "decision2Next": 2,
+            "decision2": {
+                "description": "King Meowthew is displeased, but understands that Ratopolis prioritises feeding its own population before any other.",
+                "stat1": "approval",
+                "stat1Amount": 2,
+                "stat2": "diplomacy",
+                "stat2Amount": -2,
+                "SFX": "DiplomacyMinus"
+
+            }
+        },
+        {
+            "description": "Your highness, King Meowthew has sent me with a message. He has uncovered a malicious plot by Purrcival to steal his throne. He proposes to purchase some of your weapons to bolster his military and help him arrest Purrcival before this plan gets out of hand.",
+            "advisor": "catA",
+            "SFX": "battleSound",
+            "decision1Desc": "We will send the weapons we can spare.",
+            "decision1Next": 3,
+            "decision1": {
+                "description": "King Meowthew informed me that Purrcival has been arrested for conspiring against the crown. He has sent the gold he promised, along with his thanks for your support.",
+                "stat1": "military",
+                "stat1Amount": -3,
+                "stat2": "economy",
+                "stat2Amount": 3,
+                "SFX": "EconomyPlus"
+
+            },
+            "decision2Desc": "We will not part with our weapons.",
+            "decision2Next": 4,
+            "decision2": {
+                "description": "King Meowthew has not sent a response, but I can sense that he is unhappy with your decision.",
+                "stat1": "military",
+                "stat1Amount": 1,
+                "stat2": "diplomacy",
+                "stat2Amount": -2,
+                "SFX": "DiplomacyMinus"
+
+            }
+        },
+	    {
+            "description": "My liege, We have received a message from Purrcival asking for our support to overthrow King Meowthew. He has asked us for our military support in return for a permanent peace with the Cat Kingdom when he is King. How shall we respond?",
+            "advisor": "militaryA",
+            "SFX": "",
+            "decision1Desc": "We shall support his coup!",
+            "decision1Next": 5,
+            "decision1": {
+                "description": "We recieved one more message from Purrcival thanking us with a large bag of gold coins, and telling us to be ready to act.",
+                "stat1": "military",
+                "stat1Amount": -1,
+                "stat2": "economy",
+                "stat2Amount": 2,
+                "SFX": "EconomyPlus"
+
+            },
+            "decision2Desc": "We shall reject his offer",
+            "decision2Next": 6,
+            "decision2": {
+                "description": "We have heard reports that Purrcival has gone into hiding.",
+                "stat1": "military",
+                "stat1Amount": 2,
+                "stat2": "diplomacy",
+                "stat2Amount": -1,
+                "SFX": "MillitaryPlus"
+
+            }
+        },
+	    {
+            "description": "My liege, we have captured a small group of cats who have been raiding villages near our border with the Cat Kingdom. How shall we punish them for their unforgivable behaviour?",
+            "advisor": "militaryA",
+            "SFX": "",
+            "decision1Desc": "A public execution is good for morale!",
+            "decision1Next": 7,
+            "decision1": {
+                "description": "We received a message from King Meowthew. As it turns out, those cats were wanted Purrcival supporters who were wanted dead by the crown. He thanks us for dealing with them.",
+                "stat1": "approval",
+                "stat1Amount": 2,
+                "stat2": "diplomacy",
+                "stat2Amount": 1,
+                "SFX": "ApprovalPlus"
+
+            },
+            "decision2Desc": "Send them back to King Meowthew, he can deal with them.",
+            "decision2Next": 8,
+            "decision2": {
+                "description": "Oh horror! When the cats were brought before King Meowthew, one pulled out a hidden knife and assassinated him! Purrcival was let out of his cell and he currently has the Cat Kingdom under martial law!",
+                "stat1": "military",
+                "stat1Amount": 1,
+                "stat2": "diplomacy",
+                "stat2Amount": -2,
+                "SFX": "DiplomacyMinus"
+
+            }
+        },
+	    {
+            "description": "My lord, we have received a message from a newly crowned \"King Purrcival\" claiming that Meowthew has been disposed of and that the Cat Kingdom is now his to rule. He suggests opening up trade routes between our two nations to welcome a new age of prosperity.",
+            "advisor": "economyA",
+            "SFX": "",
+            "decision1Desc": "Trade routes sounds like a great idea!",
+            "decision1Next": 9,
+            "decision1": {
+                "description": "Trade routes between our lands have been opened. They are bringing in lots of food and money to both kingdoms.",
+                "stat1": "economy",
+                "stat1Amount": 1,
+                "stat2": "food",
+                "stat2Amount": 2,
+                "SFX": "FoodPlus"
+	
+            },
+            "decision2Desc": "We will not negotiate with a regicide!",
+            "decision2Next": 10,
+            "decision2": {
+                "description": "King Purrcival has sent you a message stating that he is disappointed with your decision, and that he hopes you enjoy your crown whilst it remains on your head…",
+                "stat1": "approval",
+                "stat1Amount": 2,
+                "stat2": "diplomacy",
+                "stat2Amount": -2,
+                "SFX": "DiplomacyMinus"
+
+            }
+        },
+	    {
+            "description": "My liege, we have received a message from Purrcival telling us that the time to act is now. He has called on us to rally our troops and march on the Cat Kingdom with all due haste! Shall we heed his call?",
+            "advisor": "militaryA",
+            "SFX": "",
+            "decision1Desc": "Rally the rats!",
+            "decision1Next": 11,
+            "decision1": {
+                "description": "Our forces reached the Cat Kingdom's capital right at the same time as Purrcival's forces, trapping King Meowthew from all sides. The King surrendered and Purrcival has taken over as the king of the Cat Kingdom.",
+                "stat1": "diplomacy",
+                "stat1Amount": 2,
+                "stat2": "military",
+                "stat2Amount": -1,
+                "SFX": "MillitaryPlus"
+
+            },
+            "decision2Desc": "I have changed my mind, we will not support him.",
+            "decision2Next": 12,
+            "decision2": {
+                "description": "Without our help, Purrcival's forces were outnumbered by King Meowthew's soldiers. Purrcival's forces have been routed and he has been taken captive.",
+                "stat1": "military",
+                "stat1Amount": 1,
+                "stat2": "diplomacy",
+                "stat2Amount": -2,
+                "SFX": "MillitaryMinus"
+
+            }
+        },
+	    {
+            "description": "Your highness, I have been sent with a message from King Meowthew to inform you that Purrcival has been discovered rallying the common catfolk against the king whilst in hiding. King Meowthew requests some military support to deal with the issue, before Purrcival builds up too much support for the royal army to handle.",
+            "advisor": "catA",
+            "SFX": "",
+            "decision1Desc": "We shall send our army to support King Meowthew",
+            "decision1Next": 13,
+            "decision1": {
+                "description": "Thank you, your highness, this show of strength will definitely help deter the catfolk from following Purrcival.",
+                "stat1": "military",
+                "stat1Amount": 2,
+                "stat2": "approval",
+                "stat2Amount": -2,
+                "SFX": "MillitaryPlus"
+            },
+            "decision2Desc": "We cannot spare any military at this time.",
+            "decision2Next": 14,
+            "decision2": {
+                "description": "Oh dear! Without your military support, a riot broke out in the Cat Kingdom's capital! Purrcival supporters dragged King Meowthew from his castle and publically executed him! Purrcival has taken the throne for himself, and has the support of most of the catfolk.",
+                "stat1": "military",
+                "stat1Amount": 1,
+                "stat2": "diplomacy",
+                "stat2Amount": -2,
+                "SFX": "DiplomacyMinus"
+            }
+        },
+	    {
+            "description": "King Meowthew has sent me with an offer to form an alliance between Ratopolis and the Cat Kingdom. What shall be your response to this gracious proposal?",
+            "advisor": "catA",
+            "SFX": "",
+            "decision1Desc": "An alliance between our nations would be beneficial!",
+            "decision1Next": 15,
+            "decision1": {
+                "description": "I shall convey your response to King Meowthew. He will no doubt be pleased to hear it.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "DiplomacyPlus"
+            },
+            "decision2Desc": "I reject the offer, cats cannot be trusted!",
+            "decision2Next": 16,
+            "decision2": {
+                "description": "I shall convey your response to King Meowthew, however I believe that he will not be pleased to hear it...",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "DiplomacyMinus"
+            }
+        },
+	    {
+            "description": "My liege, hundreds of cats have been crossing over our border from the Cat Kingdom to flee from Purrcival's rule. Many cats are begging Ratopolis to liberate the Cat Kingdom from Purrcival’s tyrannical rule.",
+            "advisor": "militaryA",
+            "SFX": "",
+            "decision1Desc": "We shall rise up and fight against the oppressor!",
+            "decision1Next": 17,
+            "decision1": {
+                "description": "I have sent the order. Our armies are marching as we speak to the Cat Kingdom in order to defeat this tyrant.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "End"
+            },
+            "decision2Desc": "Who rules the Cat Kingdom is none of our concern.",
+            "decision2Next": 18,
+            "decision2": {
+                "description": "Very well, we shall leave Purrcival to rule as he sees fit.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "ApprovalMinus"
+            }
+        },
+	    {
+            "description": "My liege! We have been tricked! The trade caravans sent to us by King Purrcival hid a large number of cat soldiers who have smuggled their way into the city and are making their way to the castle! King Purrcival has sent a demand that if we surrender, he will spare your life. Will you surrender, or shall we meet them in battle?",
+            "advisor": "militaryA",
+            "SFX": "battleSound",
+            "decision1Desc": "We will not back down! Attack!!",
+            "decision1Next": 19,
+            "decision1": {
+                "description": "I have sent the order. Our remaining troops have formed up and are engaging the enemy.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "End"
+            },
+            "decision2Desc": "It is over, raise the white flag.",
+            "decision2Next": 20,
+            "decision2": {
+                "description": "I have raised the flag of surrender. King Purrcival will arrive any moment now...",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "End"
+            }
+        },
+	    {
+            "description": "My liege, cat soldiers have been spotted amassing on our border, they will almost certainly attack very soon. Do we try to surprise them with a preemptive attack, or shall we wait for them in our highly defensive castle?",
+            "advisor": "militaryA",
+            "SFX": "battlePrepSound",
+            "decision1Desc": "Let's strike them now before they have organised!",
+            "decision1Next": 21,
+            "decision1": {
+                "description": "Our troops have launched a surprise attack on the enemy at our border, we await news from the battlefield.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "End"
+            },
+            "decision2Desc": "We will use our defences to wear them out.",
+            "decision2Next": 22,
+            "decision2": {
+                "description": "We have fortified the castle and gathered as much food as possible to wait out the siege.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "FoodPlus"
+            }
+        },
+	    {
+            "description": "I have been sent with an invitation from the newly crowned King Purrcival, inviting you to a feast to celebrate your victory. Shall you be attending?",
+            "advisor": "catA",
+            "SFX": "",
+            "decision1Desc": "Of course I shall attend!",
+            "decision1Next": 23,
+            "decision1": {
+                "description": "Splendid, I will inform King Purrcival to expect you at the banquet.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "DiplomacyPlus"
+            },
+            "decision2Desc": "I will sit this one out.",
+            "decision2Next": 24,
+            "decision2": {
+                "description": "How disappointing, I know that King Purrcival was very much looking forward to meeting you.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "DiplomacyMinus"
+            }
+        },
+	    {
+            "description": "I have been sent by King Meowthew to tell you that after being questioned, Purrcival claimed that you initially supported his coup. King Meowthew wants to know if there is any truth to his statement?",
+            "advisor": "catA",
+            "SFX": "",
+            "decision1Desc": "Of course not! Purrcival is a liar!",
+            "decision1Next": 25,
+            "decision1": {
+                "description": "Thank you, I shall inform King Meowthew at once.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "ApprovalMinus"
+            },
+            "decision2Desc": "I admit that I initially supported it, but quickly changed my allegiances.",
+            "decision2Next": 26,
+            "decision2": {
+                "description": "I see, I shall let King Meowthew know at once.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "ApprovalMinus"
+            }
+        },
+	    {
+            "description": "King Meowthew sends me with an invite to a feast in the Cat Kingdom in order to thank you properly for the military support you provided. Will you be attending?",
+            "advisor": "catA",
+            "SFX": "",
+            "decision1Desc": "Of course! We shall set off immediately!",
+            "decision1Next": 27,
+            "decision1": {
+                "description": "Splendid, we will leave as soon as your carriage has been loaded.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "DiplomacyPlus"
+            },
+            "decision2Desc": "I'm afraid I won't be attending.",
+            "decision2Next": 28,
+            "decision2": {
+                "description": "That is a shame, I will sent King Meowthew your regards in your stead.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "DiplomacyMinus"
+            }
+        },
+	    {
+            "description": "My liege, an army of cats, led by 'King' Purrcival, has been seen marching on Ratopolis.They are about to pass through a dense forest, which would be the perfect place for our army to ambush them. We lack the soldiers to meet them head on, so we could either ambush their infantry on their west flank, or their archers on their east flank. Which flank should we target?",
+            "advisor": "militaryA",
+            "SFX": "",
+            "decision1Desc": "They should attack the infantry on the west flank!",
+            "decision1Next": 29,
+            "decision1": {
+                "description": "I will take these orders with me to the battlefield.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "End"
+            },
+            "decision2Desc": "They should attack the archers on the east flank!",
+            "decision2Next": 30,
+            "decision2": {
+                "description": "I will take these orders with me to the battlefield.",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "End"
+            }
+        }
+    ]
+}

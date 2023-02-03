@@ -1,0 +1,165 @@
+{
+    "mainEvents": [
+        {
+            "description": "While he is away, your father has instructed me to teach you how to rule Ratopolis, as you shall be king one day. You mustn't press space to skip through all my animations and dialogue!",
+            "advisor": "civilA",
+            "SFX": "",
+            "decision1Desc": "That sounds boring!",
+            "decision1Next": 1,
+            "decision1": {
+                "description": "",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Hmph"
+
+            },
+            "decision2Desc": "Where do we start?",
+            "decision2Next": 2,
+            "decision2": {
+                "description": "",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Ahh"
+
+            }
+        },
+        {
+            "description": "Pay attention now! Firstly, the most important part of ruling is to know how well the kingdom is doing at any point in time. You must balance out the kingdom's military strength, economy, diplomatic relations with foreign kingdoms, approval and food; otherwise you might lose your throne. You can see them in the top left corner.",
+            "advisor": "civilA",
+            "SFX": "",
+            "decision1Desc": "Interesting.",
+            "decision1Next": 3,
+            "decision1": {
+                "description": "",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Ahh"
+
+            },
+            "decision2Desc": "Boooring.",
+            "decision2Next": 4,
+            "decision2": {
+                "description": "",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Hmph"
+
+            }
+        },
+        {
+            "description": "Good. Firstly, the most important part of ruling is to know how well the kingdom is doing at any point in time. You must balance out the kingdom's military strength, economy, diplomatic relations with foreign kingdoms, approval and food; otherwise you might lose your throne. You can see them in the top left corner.",
+            "advisor": "civilA",
+            "SFX": "",
+            "decision1Desc": "Interesting.",
+            "decision1Next": 3,
+            "decision1": {
+                "description": "",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Ahh"
+
+            },
+            "decision2Desc": "Boooring.",
+            "decision2Next": 4,
+            "decision2": {
+                "description": "",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Hmph"
+
+            }
+        },
+        {
+            "description": "Different decisions you make may affect the kingdom's statistics positively or negatively. You can see which stats will be affected by a decision (in yellow), but not by how much until after you have made the decision. \n \n  Oh my, your father is back! But, oh no, he looks wounded!",
+            "advisor": "civilA",
+            "SFX": "",
+            "decision1Desc": "How intriguing!",
+            "decision1Next": 5,
+            "decision1": {
+                "description": "",
+                "stat1": "military",
+                "stat1Amount": -1,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Ahh"
+
+            },
+            "decision2Desc": "Father?!",
+            "decision2Next": 5,
+            "decision2": {
+                "description": "",
+                "stat1": "military",
+                "stat1Amount": -1,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Hmph"
+
+            }
+        },{
+            "description": "Stop messing around! Different decisions you make may affect the kingdom's statistics positively or negatively. You can see which stats will be affected by a decision (in yellow), but not by how much until after you have made the decision. \n  Oh my, your father is back! But, oh no, he looks wounded!",
+            "advisor": "civilA",
+            "SFX": "",
+            "decision1Desc": "How intriguing!",
+            "decision1Next": 5,
+            "decision1": {
+                "description": "",
+                "stat1": "military",
+                "stat1Amount": -1,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Ahh"
+
+            },
+            "decision2Desc": "Father?!",
+            "decision2Next": 5,
+            "decision2": {
+                "description": "",
+                "stat1": "military",
+                "stat1Amount": -1,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "Hmph"
+
+            }
+        },
+        {
+            "description": "My son... The battle was a stalemate... Queen Whiskers was killed in the fighting, but I have been mortally wounded... You must rise up and take the throne of Ratopolis... Be a better king than I was... Blargh... \\\u00D7dies\u00D7",
+            "advisor": "civilA",
+            "SFX": "",
+            "decision1Desc": "Noooo, father!!!",
+            "decision1Next": 6,
+            "decision1": {
+                "description": "",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "End"
+
+            },
+            "decision2Desc": "Yay, I'm the king!!",
+            "decision2Next": 6,
+            "decision2": {
+                "description": "",
+                "stat1": "",
+                "stat1Amount": 0,
+                "stat2": "",
+                "stat2Amount": 0,
+                "SFX": "End"
+
+            }
+        }
+    ]
+}

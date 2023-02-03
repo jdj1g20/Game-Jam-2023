@@ -1,0 +1,50 @@
+{
+    "events": [
+        {
+            "description": "Oh no there's a bear! What shall we do? Kill it or make friends with it?",
+            "advisor": "MilitaryA",
+            "SFX": "bearNoises",
+            "decision1Desc": "Kill it with fire!",
+            "decision1": {
+                "description": "We killed it but lost some brave rats to do so",
+                "stat1": "economy",
+                "stat1Amount": 4,
+                "stat2": "military",
+                "stat2Amount": -2,
+                "SFX": "bearDieWithFire"
+            },
+            "decision2Desc": "Make friends with it!",
+            "decision2": {
+                "description": "Turns out the bear didn't want to be our friend, it ate lots of rats but avoided our cheese!",
+                "stat1": "economy",
+                "stat1Amount": 1,
+                "stat2": "approval",
+                "stat2Amount": -3,
+                "SFX": "happyBearNoises"
+            }
+        },
+        {
+            "description": "Hmmmm it looks like someone ate all the cheese!!",
+            "advisor": "FoodA",
+            "SFX": "ratEatingNoises",
+            "decision1Desc": "It must've been the rat pope! He looks extra chubby today!!",
+            "decision1": {
+                "description": "More got stolen after we detained the rat pope, I guess he is just a fat innocent rat",
+                "stat1": "approval",
+                "stat1Amount": -1,
+                "stat2": "economy",
+                "stat2Amount": -2,
+                "SFX": "ratEatingNoises"
+            },
+            "decision2Desc": "It must've been the rat peasants! They are most likely to have done it!",
+            "decision2": {
+                "description": "We caught a rat peasant red-handed scoffing down the cheese! Let's punish him as an example to other rat peasants!",
+                "stat1": "military",
+                "stat1Amount": 3,
+                "stat2": "approval",
+                "stat2Amount": -1,
+                "SFX": "ratPainNoise"
+            }
+        }
+    ]
+}
