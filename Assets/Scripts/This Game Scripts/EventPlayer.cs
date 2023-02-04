@@ -13,6 +13,9 @@ public class EventPlayer : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI option1Text, option2Text, option3Text, option4Text;
     public Event currentEvent;
+    
+    [SerializeField]
+    private Inventory inventory;
     void Start() {
         initialTextBox.SetActive(false);
         option1.SetActive(false);
@@ -44,17 +47,48 @@ public class EventPlayer : MonoBehaviour
     }
 
     public void Option1Select() {
-        Debug.Log("Selected option 1");   
+        Debug.Log("Selected option 1"); 
+        TriggerOption(currentEvent.decision1);  
     }
 
     public void Option2Select() {
         Debug.Log("Selected option 2");   
+        TriggerOption(currentEvent.decision2);
     }
     public void Option3Select() {
         Debug.Log("Selected option 3");   
+        TriggerOption(currentEvent.decision3);
     }
     public void Option4Select() {
         Debug.Log("Selected option 4");   
+        TriggerOption(currentEvent.decision4);
+    }
+
+    private void TriggerOption(Option option) {
+        int resourceAmount = option.resourceAmount;
+        switch (option.resource)
+        {
+            case "Food" :
+                Debug.Log("Food case");
+                if (inventory.Food >= resourceAmount) {
+                    
+                    inventory.calcFood(resourceAmount);
+                    Debug.Log("Have enough food, food is now " + inventory.Food);
+                }
+                break;
+            case "Money" :
+                Debug.Log("Money case");
+                break;
+            case "Bullets" :
+                Debug.Log("Bullets case");
+                break;
+            case "Tools" :
+                Debug.Log("Tools case");
+                break;
+            default:
+                Debug.Log("Other case");
+                break;
+        }
     }
 
 }
