@@ -9,7 +9,7 @@ public class EventPlayer : MonoBehaviour
   public GameObject invobj;
 
     [SerializeField]
-    private GameObject initialTextBox, option1, option2, option3, option4;
+    private GameObject initialTextBox, option1, option2, option3, option4, continueButton;
     [SerializeField]
     private TextRevealScript initialTextBoxText;
     [SerializeField]
@@ -22,6 +22,7 @@ public class EventPlayer : MonoBehaviour
     private Wagon wagon;
     public bool playingOutcome = false;
     private bool gameOver = false;
+    private bool dayEnd = false;
     void Start() {
         if(Inventory.Instance != null){
           inventory = Inventory.Instance;
@@ -31,8 +32,10 @@ public class EventPlayer : MonoBehaviour
         option2.SetActive(false);
         option3.SetActive(false);
         option4.SetActive(false);
+        continueButton.SetActive(false);
     }
     public void PlayEvent(Event eventToPlay) {
+        dayEnd = false;
         playingOutcome = false;
         Debug.Log("Playing event " + eventToPlay.description);
         currentEvent = eventToPlay;
@@ -53,7 +56,19 @@ public class EventPlayer : MonoBehaviour
             } else
             {
                 Debug.Log("Next event");
+
+                continueButton.SetActive(true);
             }
+        } else if (dayEnd) {
+            Debug.Log("Day end text finished");
+            if (gameOver) {
+                Debug.Log("GameOver Screen");
+            } else {
+                Debug.Log("Start next day");
+
+                continueButton.SetActive(true);
+            }
+
         } else {
             Debug.Log("Text ended");
             option1Text.text = currentEvent.decision1Desc;
@@ -86,6 +101,71 @@ public class EventPlayer : MonoBehaviour
         Debug.Log("Selected option 4");
         TriggerOption(currentEvent.decision4);
     }
+    public void ContinueSelect() {
+        Debug.Log("Selected continue button");
+        if (dayEnd) {
+            Debug.Log("Starting next event");
+
+        } else {
+            
+            continueButton.SetActive(false);
+            // change background to campfire
+            PlayDayEnd();
+        }
+        
+
+    }
+
+    private void PlayDayEnd() {
+        Debug.Log("Starting Day End");
+        dayEnd= true;
+        int peopleAlive = wagon.Lives;
+        Debug.Log("People Alive: " + peopleAlive);
+
+        string dayEndText = "";
+
+        // Check if someone dies of dysentery
+        float dysenteryChance = Random.Range(0,1f);
+        if (dysenteryChance < 0.05f) {
+            Debug.Log("O no someone died of dysentery");
+            wagon.Lives -= 1;
+            if (wagon.Lives > 0) {
+                dayEndText += "You died of dysentery. Good job.";
+                gameOver = true;
+                StartCoroutine(initialTextBoxText.NewTextToDisplay(dayEndText));
+                return;
+            } else {
+                dayEndText += "One of your family members died of dysentery in the night.\n";
+            }
+        } else {
+            Debug.Log("No-one died of dysentery");
+            dayEndText += "No-one died of dysentery\n";
+        }
+
+        if (inventory.calcFood(wagon.Lives * -1) == -1) {
+            if (wagon.Lives > 0) {
+                dayEndText += "Your family ate all your food, but didn't have enough. Someone starved to death in the night.\n";
+            } else {
+                dayEndText += "You've run out of food and starved to death in the night. Good job.\n";
+                gameOver = true;
+                StartCoroutine(initialTextBoxText.NewTextToDisplay(dayEndText));
+                return;
+            }
+            
+        } else {
+            dayEndText += "Your family ate " + wagon.Lives + " food.\n";
+        }
+        
+        if (wagon.Traveler) {
+            if (inventory.calcFood(1) == -1) {
+                dayEndText += "The traveller had no food and starved to death.\n";
+            } else {
+                dayEndText += "The traveller ate 1 food\n";
+            }
+        }
+        StartCoroutine(initialTextBoxText.NewTextToDisplay(dayEndText));
+    }
+
 
     private void TriggerOption(Option option) {
         int resourceAmount = option.resourceAmount;
