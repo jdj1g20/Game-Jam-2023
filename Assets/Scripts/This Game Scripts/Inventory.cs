@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Inventory: MonoBehaviour{
   public int Bullets;
@@ -12,11 +14,16 @@ public class Inventory: MonoBehaviour{
   public int maxFood;
   public int maxMoney;
   public int maxTools;
+  public TextMeshProUGUI MonDisplay;
+  public TextMeshProUGUI FoodDisplay;
+  public TextMeshProUGUI ToolsDisplay;
+  public TextMeshProUGUI BulletsDisplay;
+
 
 public Inventory(){
   Bullets = 0;
     Food = 0;
-    Money = 0;
+    Money = 100;
     Tools = 0;
     Weight = 0.0f;
     maxBullets = 10;
@@ -32,7 +39,7 @@ public int calcFood(int Change){
   }else if (newV > maxFood) {
     return 1;
   }else {
-    Food =+ Change;
+    Food = Food+ Change;
     return 0;
   }
 }
@@ -44,7 +51,7 @@ public int calcBullets(int Change){
   }else if (newV > maxBullets) {
     return 1;
   }else {
-    Bullets =+ Change;
+    Bullets =Bullets+ Change;
     return 0;
   }
 }
@@ -56,19 +63,19 @@ public int calcMoney(int Change){
   }else if (newV > maxMoney) {
     return 1;
   }else {
-    Money =+ Change;
+    Money =Money+ Change;
     return 0;
   }
 }
 
 public int calcTools(int Change){
-   int newV =  Tools - Change;
+   int newV =  Tools + Change;
   if (newV < 0){
     return -1;
   }else if (newV > maxTools) {
     return 1;
   }else {
-    Tools =+ Change;
+    Tools =Tools+ Change;
         return 0;
   }
 }
@@ -77,5 +84,10 @@ public bool checkInventory(){
   return calcFood(0)+calcBullets(0)+calcMoney(0)+calcTools(0) == 0;
 }
 
-
+void Update(){
+     MonDisplay.text = Money.ToString();
+     FoodDisplay.text = Food.ToString();
+     ToolsDisplay.text = Tools.ToString();
+     BulletsDisplay.text = Bullets.ToString();
+}
 }

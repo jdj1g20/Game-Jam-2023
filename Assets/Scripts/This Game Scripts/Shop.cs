@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class Shop: MonoBehaviour{
   public int Food4S;
@@ -19,13 +20,14 @@ public class Shop: MonoBehaviour{
   public string status;
 
   public Inventory inventory;
+  public TextMeshProUGUI StatusBox;
 
 
 public Shop(){
   Food4S = 30;
   Bullets4S = 5;
   Tools4S = 3;
-  FoodCost = 1;
+  FoodCost = 5;
   BulletCost = 5;
   ToolCost = 10;
   status = "";
@@ -38,6 +40,7 @@ public int BuyFood(int Amount, int Money){ //returns cost of product or -1 if it
     //sucessful buy can occur
     Food4S= Food4S-Amount;
     if (Amount*FoodCost > Money){
+      Debug.Log("Too expensive");
       return 0;
     }
     return Amount*FoodCost;
@@ -74,21 +77,28 @@ public int BuyTools(int Amount,int Money){ //returns cost of product or -1 if it
 
 
 public void onClickFood(){
-  int amnt = 1; //maybe usefull in future
+  int amnt = 5; //maybe usefull in future
   int outcome =  BuyFood(amnt,inventory.Money);
+  Debug.Log("Amount is " + outcome);
   if (outcome >0 ){ //sucess
+    Debug.Log("Sucess, adding ");
       int a2 = inventory.calcFood(amnt);
       if (a2 == 1){
           status = "Already at max food"+ inventory.maxFood;
            Food4S =  Food4S+amnt; //return item
+           Debug.Log("MaxFood");
       }else{
-        int a1 = inventory.calcMoney(outcome);
+        int a1 = inventory.calcMoney(-outcome);
         if (a1 == -1){
+          Debug.Log("OutOfMoney");
           status = "Out of money";
         }else{
+          Debug.Log("Sucess");
           status = "Sucess!";
         }
       }
+  }else{
+    status = "Im out!";
   }
 }
 
@@ -101,13 +111,15 @@ public void onClickTool(){
           status = "Already at max Tools"+ inventory.maxTools;
            Tools4S =  Tools4S+amnt; //return item
       }else{
-        int a1 = inventory.calcMoney(outcome);
+        int a1 = inventory.calcMoney(-outcome);
         if (a1 == -1){
           status = "Out of money";
         }else{
           status = "Sucess!";
         }
       }
+  }else{
+    status = "Im out!";
   }
 }
 
@@ -118,21 +130,23 @@ public void onClickBullet(){
       int a2 = inventory.calcBullets(amnt);
       if (a2 == 1){
           status = "Already at max Bullets"+ inventory.maxFood;
-           Food4S =  Bullets4S+amnt; //return item
+           Bullets4S =  Bullets4S+amnt; //return item
       }else{
-        int a1 = inventory.calcMoney(outcome);
+        int a1 = inventory.calcMoney(-outcome);
         if (a1 == -1){
           status = "Out of money";
         }else{
           status = "Sucess!";
         }
       }
+  }else{
+    status = "Im out!";
   }
 }
-
-public void onClickRat(){
-  status = "Squeeeeeek";
-}
-
-
+  public void onClickRat(){
+    status = "Squeeeeeek";
+  }
+  void Update(){
+    StatusBox.text = status;
+  }
 }
