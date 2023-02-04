@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public abstract class EventPlayer : MonoBehaviour 
+public class EventPlayer : MonoBehaviour 
 
 {
-    public abstract void PlayEvent(Event eventToPlay);
-    public abstract void RevealEventChoices();
-    public abstract IEnumerator StartInitialEventDescription();
-    public abstract void TextEnded();
+    public void PlayEvent(Event eventToPlay) {
 
-    public abstract void EventEnded();
+    }
 
 }

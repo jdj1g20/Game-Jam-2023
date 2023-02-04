@@ -9,7 +9,7 @@ public class Wagon{
   public int Travel;
   public int Lives;
   public Sprite WagonSprite;
-  public string spriteSting;
+  public string spriteString;
   
 public Wagon(){
     Beaver = true;
