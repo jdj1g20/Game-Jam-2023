@@ -14,10 +14,6 @@ public class Inventory: MonoBehaviour{
   public int maxFood;
   public int maxMoney;
   public int maxTools;
-  public TextMeshProUGUI MonDisplay;
-  public TextMeshProUGUI FoodDisplay;
-  public TextMeshProUGUI ToolsDisplay;
-  public TextMeshProUGUI BulletsDisplay;
    public static Inventory Instance;
 
 
@@ -85,12 +81,6 @@ public bool checkInventory(){
   return calcFood(0)+calcBullets(0)+calcMoney(0)+calcTools(0) == 0;
 }
 
-void Update(){
-     MonDisplay.text = Money.ToString();
-     FoodDisplay.text = Food.ToString();
-     ToolsDisplay.text = Tools.ToString();
-     BulletsDisplay.text = Bullets.ToString();
-}
 void Awake()
     {
         this.InstantiateController();

@@ -79,26 +79,24 @@ public int BuyTools(int Amount,int Money){ //returns cost of product or -1 if it
 public void onClickFood(){
   int amnt = 5; //maybe usefull in future
   int outcome =  BuyFood(amnt,inventory.Money);
-  Debug.Log("Amount is " + outcome);
   if (outcome >0 ){ //sucess
-    Debug.Log("Sucess, adding ");
       int a2 = inventory.calcFood(amnt);
       if (a2 == 1){
-          status = "Already at max food"+ inventory.maxFood;
+           status = "You already have enough food >8:(";
            Food4S =  Food4S+amnt; //return item
            Debug.Log("MaxFood");
       }else{
         int a1 = inventory.calcMoney(-outcome);
         if (a1 == -1){
           Debug.Log("OutOfMoney");
-          status = "Out of money";
+          status = "You seem to be out of money son";
         }else{
           Debug.Log("Sucess");
-          status = "Sucess!";
+          status = "YeeHaw Thanks for Buisness";
         }
       }
   }else{
-    status = "Im out!";
+    status = "Im outa beans!";
   }
 }
 
@@ -107,19 +105,19 @@ public void onClickTool(){
   int outcome =  BuyTools(amnt,inventory.Money);
   if (outcome >0 ){ //sucess
       int a2 = inventory.calcTools(amnt);
+      status = "You already have the maximum amount your chart carries";
       if (a2 == 1){
-          status = "Already at max Tools"+ inventory.maxTools;
            Tools4S =  Tools4S+amnt; //return item
       }else{
         int a1 = inventory.calcMoney(-outcome);
         if (a1 == -1){
           status = "Out of money";
         }else{
-          status = "Sucess!";
+          status = "Hope it serves you well";
         }
       }
   }else{
-    status = "Im out!";
+    status = "I aint got no more tools!";
   }
 }
 
@@ -129,18 +127,18 @@ public void onClickBullet(){
   if (outcome >0 ){ //sucess
       int a2 = inventory.calcBullets(amnt);
       if (a2 == 1){
-          status = "Already at max Bullets"+ inventory.maxFood;
+          status = "You gonna shoot up an entire town? you got enough";
            Bullets4S =  Bullets4S+amnt; //return item
       }else{
         int a1 = inventory.calcMoney(-outcome);
         if (a1 == -1){
-          status = "Out of money";
+          status = "No Cash, no Sale";
         }else{
-          status = "Sucess!";
+          status = "Yee thats what Im talking about";
         }
       }
   }else{
-    status = "Im out!";
+    status = "All outa Bullets";
   }
 }
   public void onClickRat(){
