@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Wagon{
+public class Wagon: MonoBehaviour{
   public bool Beaver;
   public bool Traveler;
   public int Travel;
   public int Lives;
   public Sprite WagonSprite;
   public string spriteString;
-  
+
 public Wagon(){
     Beaver = true;
     Traveler = false;
