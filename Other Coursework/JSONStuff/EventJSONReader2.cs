@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 
 
-public static class EventJSONReader
+public static class EventJSONReader2
 {
 
     public static Events GenerateEventsFromJSON(TextAsset json)

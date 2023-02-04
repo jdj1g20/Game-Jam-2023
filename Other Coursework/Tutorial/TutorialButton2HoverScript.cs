@@ -20,16 +20,16 @@ public class TutorialButton2HoverScript : MonoBehaviour, IPointerEnterHandler, I
         if (mainGameLoopScript.playingMainEvent) {
             EventMain currentEvent = mainEventPlayer.currentEvent;
             if (!mainEventPlayer.finalEvent) {
-                string stat1 = currentEvent.decision2.stat1;
-                string stat2 = currentEvent.decision2.stat2;
-                ChangeStatColourYellow(CheckStat(stat1), CheckStat(stat2));
+                // string stat1 = currentEvent.decision2.stat1;
+                // string stat2 = currentEvent.decision2.stat2;
+                // ChangeStatColourYellow(CheckStat(stat1), CheckStat(stat2));
             }
             
         } else {
-            Event currentEvent = eventPlayer.currentEvent;
-            string stat1 = currentEvent.decision2.stat1;
-            string stat2 = currentEvent.decision2.stat2;
-            ChangeStatColourYellow(CheckStat(stat1), CheckStat(stat2));
+            // Event currentEvent = eventPlayer.currentEvent;
+            // string stat1 = currentEvent.decision2.stat1;
+            // string stat2 = currentEvent.decision2.stat2;
+            // ChangeStatColourYellow(CheckStat(stat1), CheckStat(stat2));
         }
         
     }
@@ -37,15 +37,15 @@ public class TutorialButton2HoverScript : MonoBehaviour, IPointerEnterHandler, I
     public void OnPointerExit(PointerEventData eventData) {
         Debug.Log("Mouse Exit Button2");
         if (mainGameLoopScript.playingMainEvent) {
-            EventMain currentEvent = mainEventPlayer.currentEvent;
-            string stat1 = currentEvent.decision2.stat1;
-            string stat2 = currentEvent.decision2.stat2;
-            ChangeStatColourWhite(CheckStat(stat1), CheckStat(stat2));
+            // EventMain currentEvent = mainEventPlayer.currentEvent;
+            // string stat1 = currentEvent.decision2.stat1;
+            // // string stat2 = currentEvent.decision2.stat2;
+            // ChangeStatColourWhite(CheckStat(stat1), CheckStat(stat2));
         } else {
-            Event currentEvent = eventPlayer.currentEvent;
-            string stat1 = currentEvent.decision2.stat1;
-            string stat2 = currentEvent.decision2.stat2;
-            ChangeStatColourWhite(CheckStat(stat1), CheckStat(stat2));
+            // Event currentEvent = eventPlayer.currentEvent;
+            // string stat1 = currentEvent.decision2.stat1;
+            // string stat2 = currentEvent.decision2.stat2;
+            //ChangeStatColourWhite(CheckStat(stat1), CheckStat(stat2));
         }
     }
 

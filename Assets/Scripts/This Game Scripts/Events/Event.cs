@@ -11,18 +11,23 @@ public class Event
     // Description to display that describes the event scenario
     // (i.e. The church wants us to sacrifice everyone to rat god. What do we do?)
     public string description;
-    // The advisor who will appear on-screen to describe the event
-    public string advisor;
-    // Sound effect to play while description is read
-    public string SFX;
+    // Background image to display
+    public string background;
 
-    // The two decisions that appear after the description is read
-    public Decision decision1;
+    // The four decisions that appear after the description is read
+    public Option decision1;
     // Description to show on decision1 button
     public string decision1Desc;
-    public Decision decision2;
+    public Option decision2;
     // Description to show on decision2 button
     public string decision2Desc;
+    public Option decision3;
+    
+    // Description to show on decision3 button
+    public string decision3Desc;
+    public Option decision4;
+    // Description to show on decision4 button
+    public string decision4Desc;
 
 
 }

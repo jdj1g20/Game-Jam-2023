@@ -1,0 +1,60 @@
+{
+    "events": [
+        {
+            "description": "Oh no there's a bear! What shall we do? Kill it or make friends with it?",
+            "background": "background1",
+            "decision1Desc": "Kill it with fire!",
+            "decision1": {
+                "resource": "Money",
+                "resourceAmount": 1,
+                "outcomeSuccess": {
+                    "finalDescription": "o no u die",
+                    "someoneDies": true
+                },
+                "outcomeFailure": {
+                    "finalDescription": "yay u don't die",
+                    "someoneDies": false
+                }
+            },
+            "decision2Desc": "Kill it with money!",
+            "decision2": {
+                "resource": "Money",
+                "resourceAmount": 1,
+                "outcomeSuccess": {
+                    "finalDescription": "o no u die",
+                    "someoneDies": true
+                },
+                "outcomeFailure": {
+                    "finalDescription": "yay u don't die",
+                    "someoneDies": false
+                }
+            },
+            "decision3Desc": "Kill it with children!",
+            "decision3": {
+                "resource": "Money",
+                "resourceAmount": 1,
+                "outcomeSuccess": {
+                    "finalDescription": "o no u die",
+                    "someoneDies": true
+                },
+                "outcomeFailure": {
+                    "finalDescription": "yay u don't die",
+                    "someoneDies": false
+                }
+            },
+            "decision4Desc": "Kill it with food!",
+            "decision4": {
+                "resource": "Money",
+                "resourceAmount": 1,
+                "outcomeSuccess": {
+                    "finalDescription": "o no u die",
+                    "someoneDies": true
+                },
+                "outcomeFailure": {
+                    "finalDescription": "yay u don't die",
+                    "someoneDies": false
+                }
+            }
+            
+        }]
+    }

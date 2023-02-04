@@ -180,18 +180,18 @@ public class MainEventPlayer : MonoBehaviour
         StartCoroutine(eventText.NewTextToDisplay(eventString, false));
     }
     
-    // Event Ended function for advisor to call
-    public void EventEnded() {
-        // Tell main game loop that event has ended
-        Debug.Log("Setting mainGameLoopScript.mainEventNo to " + nextMainEvent);
-        mainGameLoopScript.mainEventNo = nextMainEvent;
-        if (!finalEvent) {
+    // // Event Ended function for advisor to call
+    // public void EventEnded() {
+    //     // Tell main game loop that event has ended
+    //     Debug.Log("Setting mainGameLoopScript.mainEventNo to " + nextMainEvent);
+    //     // mainGameLoopScript.mainEventNo = nextMainEvent;
+    //     if (!finalEvent) {
             
-            mainGameLoopScript.EventEnded();
-        } else {
-            mainGameLoopScript.FinalEventEnded(nextMainEvent);
-        }
+    //         mainGameLoopScript.EventEnded();
+    //     } else {
+    //         // mainGameLoopScript.FinalEventEnded(nextMainEvent);
+    //     }
         
         
-    }    
+    // }    
 }

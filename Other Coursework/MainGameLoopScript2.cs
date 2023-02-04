@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 
-public class MainGameLoopScript : MonoBehaviour
+public class MainGameLoopScript2 : MonoBehaviour
 {
     public TextAsset genericEventsJSON;
     public TextAsset mainEventsJSON;

@@ -21,17 +21,17 @@ public class TutorialButton1HoverScript : MonoBehaviour, IPointerEnterHandler, I
             Debug.Log("MainEvent playing");
             EventMain currentEvent = mainEventPlayer.currentEvent;
             if (!mainEventPlayer.finalEvent) {
-                string stat1 = currentEvent.decision1.stat1;
-                string stat2 = currentEvent.decision1.stat2;    
-                ChangeStatColourYellow(CheckStat(stat1), CheckStat(stat2));
+                // string stat1 = currentEvent.decision1.stat1;
+                // string stat2 = currentEvent.decision1.stat2;    
+                // ChangeStatColourYellow(CheckStat(stat1), CheckStat(stat2));
             }
             
         } else {
-            Debug.Log("GenericEvent playing");
-            Event currentEvent = eventPlayer.currentEvent;
-            string stat1 = currentEvent.decision1.stat1;
-            string stat2 = currentEvent.decision1.stat2;
-            ChangeStatColourYellow(CheckStat(stat1), CheckStat(stat2));
+            // Debug.Log("GenericEvent playing");
+            // Event currentEvent = eventPlayer.currentEvent;
+            // string stat1 = currentEvent.decision1.stat1;
+            // string stat2 = currentEvent.decision1.stat2;
+            // ChangeStatColourYellow(CheckStat(stat1), CheckStat(stat2));
         }
          
         
@@ -42,17 +42,17 @@ public class TutorialButton1HoverScript : MonoBehaviour, IPointerEnterHandler, I
     public void OnPointerExit(PointerEventData eventData) {
         Debug.Log("Mouse Exit Button1");
         if (mainGameLoopScript.playingMainEvent) {
-            Debug.Log("MainEvent playing");
-            EventMain currentEvent = mainEventPlayer.currentEvent;
-            string stat1 = currentEvent.decision1.stat1;
-            string stat2 = currentEvent.decision1.stat2;
-            ChangeStatColourWhite(CheckStat(stat1), CheckStat(stat2));
+            // Debug.Log("MainEvent playing");
+            // EventMain currentEvent = mainEventPlayer.currentEvent;
+            // string stat1 = currentEvent.decision1.stat1;
+            // string stat2 = currentEvent.decision1.stat2;
+            // ChangeStatColourWhite(CheckStat(stat1), CheckStat(stat2));
         } else {
-            Debug.Log("Generic Event playing");
-            Event currentEvent = eventPlayer.currentEvent;
-            string stat1 = currentEvent.decision1.stat1;
-            string stat2 = currentEvent.decision1.stat2;
-            ChangeStatColourWhite(CheckStat(stat1), CheckStat(stat2));
+            // Debug.Log("Generic Event playing");
+            // Event currentEvent = eventPlayer.currentEvent;
+            // string stat1 = currentEvent.decision1.stat1;
+            // string stat2 = currentEvent.decision1.stat2;
+            // ChangeStatColourWhite(CheckStat(stat1), CheckStat(stat2));
         }
         
     }
