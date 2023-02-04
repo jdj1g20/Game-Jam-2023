@@ -107,12 +107,12 @@ public class EventPlayer : MonoBehaviour
             Debug.Log("Starting next event");
 
         } else {
-            
+
             continueButton.SetActive(false);
             // change background to campfire
             PlayDayEnd();
         }
-        
+
 
     }
 
@@ -151,11 +151,11 @@ public class EventPlayer : MonoBehaviour
                 StartCoroutine(initialTextBoxText.NewTextToDisplay(dayEndText));
                 return;
             }
-            
+
         } else {
             dayEndText += "Your family ate " + wagon.Lives + " food.\n";
         }
-        
+
         if (wagon.Traveler) {
             if (inventory.calcFood(1) == -1) {
                 dayEndText += "The traveller had no food and starved to death.\n";
