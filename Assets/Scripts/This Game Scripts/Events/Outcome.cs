@@ -11,6 +11,6 @@ public class Outcome
     // Final description to read in campfire
     public string finalDescription;
     // Does someone die?
-    public bool someoneDies;
+    public int someoneDies;
 
 }

@@ -30,8 +30,8 @@ public void addTraveler(){
 }
 
 public int calcLives(int Change){
-   int newV = Lives - Change;
-  if (newV < 0){
+   Lives = Lives - Change;
+  if (Lives < 1){
     return -1;
   }
     return 0;
