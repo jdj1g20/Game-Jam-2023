@@ -1,58 +1,58 @@
 {
     "events": [
         {
-            "description": "Oh no there's a bear! What shall we do? Kill it or make friends with it?",
+            "description": "Around Midday you meet a traveler on the road, he looks a bit rough and lost. He stops your wagoon and says to you: \n \" Howdy there, how y'all doin, the sherif in Orato has decided to exile me for no particular reason. I am very hungry however would you not spare a bit of bean?\" What do you do?",
             "background": "background1",
-            "decision1Desc": "Kill it with fire!",
+            "decision1Desc": "Shoot!",
             "decision1": {
-                "resource": "Money",
+                "resource": "Bullets",
                 "resourceAmount": 1,
                 "outcomeSuccess": {
-                    "finalDescription": "o no u die",
-                    "someoneDies": true
+                    "finalDescription": "You take out your trusty Ratvolver and shoot at the stranger, he expertly dodges the bullet and says \" I like how you think stranger, why dont I join you on your travels? \" \n You gain a new rat.",
+                    "someoneDies": 1
                 },
                 "outcomeFailure": {
-                    "finalDescription": "yay u don't die",
-                    "someoneDies": false
+                    "finalDescription": "You take out your gun and pull the trigger, and the gun does not do the shooting. You are out of bullets. The stranger runs at you and knocks you out. As you wake up you find that one of your family members is missing.",
+                    "someoneDies": 1
                 }
             },
-            "decision2Desc": "Kill it with money!",
+            "decision2Desc": "Share some beans with the rat.",
             "decision2": {
-                "resource": "Money",
+                "resource": "Food",
                 "resourceAmount": 1,
                 "outcomeSuccess": {
-                    "finalDescription": "o no u die",
-                    "someoneDies": true
+                    "finalDescription": "You share some food with the rat, he shares his tragic backstory with you.",
+                    "someoneDies": 0
                 },
                 "outcomeFailure": {
-                    "finalDescription": "yay u don't die",
-                    "someoneDies": false
+                    "finalDescription": "You loudly proclaim \" Yee-haw, I got food for days \" before finding out that tyou are out of beans. Reaching in your beanbag you come out empty handed.\n \"Is this some kind of a joke, you know what Ill eat one of you, yeah I am a canibal. The Strange rat knocks you out and steals one of your family members. What a way to go.",
+                    "someoneDies": 0
                 }
             },
-            "decision3Desc": "Kill it with children!",
+            "decision3Desc": "Give him your child",
             "decision3": {
-                "resource": "Money",
+                "resource": "Child",
                 "resourceAmount": 1,
                 "outcomeSuccess": {
-                    "finalDescription": "o no u die",
-                    "someoneDies": true
+                    "finalDescription": "Weirdly enough, after you send your child to the strange man, your son shouts \"Father, I have finaly found you!\" you realise suddenly that your child has not been your own but someone who replaced your own ages ago. When did this happen? How did a child manage this? Who is this strange man? You will never know.",
+                    "someoneDies": 1
                 },
                 "outcomeFailure": {
-                    "finalDescription": "yay u don't die",
-                    "someoneDies": false
+                    "finalDescription": "You say to the man \" I will give you my child for you not to bother me\" He says slurping as if hungry \" Yummy Yummy, I mean I recon that would work Cowrat\", as you reach into your wagon you return childless. The stranger feels sad for you and you grants you botherfree passage.",
+                    "someoneDies": 0
                 }
             },
-            "decision4Desc": "Kill it with food!",
+            "decision4Desc": "Ignore",
             "decision4": {
-                "resource": "Money",
-                "resourceAmount": 1,
+                "resource": "Food",
+                "resourceAmount": 3,
                 "outcomeSuccess": {
-                    "finalDescription": "o no u die",
-                    "someoneDies": true
+                    "finalDescription": "As you pass by you hear the back of your trusty wagon rip and a scream. As you look back one of your family members are missing and some beans.",
+                    "someoneDies": 1
                 },
                 "outcomeFailure": {
-                    "finalDescription": "yay u don't die",
-                    "someoneDies": false
+                    "finalDescription": "As you pass by you hear the back of your trusty wagon rip and a scream. As you look back two of your family members are missing.",
+                    "someoneDies": 2
                 }
             }
             
