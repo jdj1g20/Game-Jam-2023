@@ -27,7 +27,7 @@
                 },
                 "outcomeFailure": {
                     "finalDescription": "You loudly proclaim \" Yee-haw, I got food for days \" before finding out that tyou are out of beans. Reaching in your beanbag you come out empty handed.\n \"Is this some kind of a joke, you know what Ill eat one of you, yeah I am a canibal. The Strange rat knocks you out and steals one of your family members. What a way to go.",
-                    "someoneDies": 0
+                    "someoneDies": 1
                 }
             },
             "decision3Desc": "Give him your child",
@@ -35,11 +35,11 @@
                 "resource": "Child",
                 "resourceAmount": 1,
                 "outcomeSuccess": {
-                    "finalDescription": "Weirdly enough, after you send your child to the strange man, your son shouts \"Father, I have finaly found you!\" you realise suddenly that your child has not been your own but someone who replaced your own ages ago. When did this happen? How did a child manage this? Who is this strange man? You will never know.",
+                    "finalDescription": "Weirdly enough, after you send your child to the strange man, your son shouts \"Father, I have finally found you!\" you realise suddenly that your child has not been your own but someone who replaced your own ages ago. When did this happen? How did a child manage this? Who is this strange man? You will never know.",
                     "someoneDies": 1
                 },
                 "outcomeFailure": {
-                    "finalDescription": "You say to the man \" I will give you my child for you not to bother me\" He says slurping as if hungry \" Yummy Yummy, I mean I recon that would work Cowrat\", as you reach into your wagon you return childless. The stranger feels sad for you and you grants you botherfree passage.",
+                    "finalDescription": "You say to the man \" I will give you my child for you not to bother me\" He says slurping as if hungry \" Yummy Yummy, I mean I reckon that would work Cowrat\", as you reach into your wagon you realise your child is dead. The stranger feels sad for you and you grants you botherfree passage.",
                     "someoneDies": 0
                 }
             },
