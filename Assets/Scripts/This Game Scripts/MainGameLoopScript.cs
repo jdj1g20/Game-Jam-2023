@@ -44,7 +44,9 @@ public class MainGameLoopScript : MonoBehaviour
             eventsList[i] = eventsList[random];
             eventsList[random] = temp;
         }
-      
+
+        Event firstEvent = eventsList[0];
+        eventPlayer.PlayEvent(firstEvent);
     
 
     }
