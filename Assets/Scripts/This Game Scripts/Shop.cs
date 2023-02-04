@@ -146,6 +146,13 @@ public void onClickBullet(){
   public void onClickRat(){
     status = "Squeeeeeek";
   }
+
+  public void onClickDone(){
+    Debug.Log("Clicked Done");
+    SceneMan.loadScene("MainGame");
+
+  }
+
   void Update(){
     StatusBox.text = status;
   }
