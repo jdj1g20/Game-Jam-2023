@@ -8,6 +8,7 @@ public class Event
 {
     // Variable names must match variables in the JSON.
 
+    public string sceneName;
     // Description to display that describes the event scenario
     // (i.e. The church wants us to sacrifice everyone to rat god. What do we do?)
     public string description;

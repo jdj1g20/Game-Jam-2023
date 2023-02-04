@@ -2,7 +2,7 @@
     "events": [
         {
         	"sceneName": "Traveler",
-            "description": "Around Midday you meet a traveler on the road, he looks a bit rough and lost. He stops your wagoon and says to you: \n \" Howdy there, how y'all doin, the sherif in Orato has decided to exile me for no particular reason. I am very hungry however would you not spare a bit of bean?\" What do you do?",
+            "description": "Around Midday you meet a traveler on the road, he looks a bit rough and lost. He stops your wagon and says to you: \n \" Howdy there, how y'all doin, the sherif in Orato has decided to exile me for no particular reason. I am very hungry however could you not spare me a bit of bean?\" What do you do?",
             "background": "background1",
             "decision1Desc": "Shoot!",
             "decision1": {
@@ -26,7 +26,7 @@
                     "someoneDies": 0
                 },
                 "outcomeFailure": {
-                    "finalDescription": "You loudly proclaim \" Yee-haw, I got food for days \" before finding out that tyou are out of beans. Reaching in your beanbag you come out empty handed.\n \"Is this some kind of a joke, you know what Ill eat one of you, yeah I am a canibal. The Strange rat knocks you out and steals one of your family members. What a way to go.",
+                    "finalDescription": "You loudly proclaim \" Yee-haw, I got food for days \" before finding out that you are out of beans. Reaching in your beanbag you come out empty handed.\n \"Is this some kind of a joke, you know what I'll eat one of you. Yeah, I am a cannibal. The strange rat knocks you out and steals one of your family members. What a way to go.",
                     "someoneDies": 1
                 }
             },
@@ -35,7 +35,7 @@
                 "resource": "Child",
                 "resourceAmount": 1,
                 "outcomeSuccess": {
-                    "finalDescription": "Weirdly enough, after you send your child to the strange man, your son shouts \"Father, I have finally found you!\" you realise suddenly that your child has not been your own but someone who replaced your own ages ago. When did this happen? How did a child manage this? Who is this strange man? You will never know.",
+                    "finalDescription": "Weirdly enough, after you send your child to the strange man, your son shouts \"Father, I have finally found you!\" you suddenly realise that your child is not actually your own, but someone who replaced your own child ages ago. When did this happen? How did a child manage this? Who is this strange man? You will never know.",
                     "someoneDies": 1
                 },
                 "outcomeFailure": {
@@ -57,7 +57,8 @@
                 }
             }
             
-        },{
+        },
+        {
         
         	"sceneName": "Rockslide",
             "description": "Around Midday you meet a traveler on the road, he looks a bit rough and lost. He stops your wagoon and says to you: \n \" Howdy there, how y'all doin, the sherif in Orato has decided to exile me for no particular reason. I am very hungry however would you not spare a bit of bean?\" What do you do?",
@@ -116,5 +117,63 @@
             }
      
         
+        },
+        {
+        	"sceneName": "Bandits",
+            "description": "Late at night, three raccoon bandits step out infront of your wagon holding guns! \n \" There be a toll to pass through this here passage. We'd advise you to pay up with whatever you have, otherwise things might get messy...\" \n What do you do?",
+            "background": "background1",
+            "decision1Desc": "Shoot the bandits!",
+            "decision1": {
+                "resource": "Bullets",
+                "resourceAmount": 1,
+                "outcomeSuccess": {
+                    "finalDescription": "Quickly snatching up your Ratvolver, you shoot at the raccoon bandits! One of them drops dead on the spot. The raccoon on the left screams out \" TIMMY, NOOOO \" and he takes out his pistol and shoots one of your family members. You reload and quickly finish him off. The final raccoon says \" Screw this!\" and runs off.",
+                    "someoneDies": 1
+                },
+                "outcomeFailure": {
+                    "finalDescription": "You grab your gun and pull the trigger, but nothing happens. You are out of bullets. The raccoons share glances with eachother and you see large grins forming at each of their mouthes. \" Well I guess we can just take your lives as payment!!\"",
+                    "someoneDies": 5
+                }
+            },
+            "decision2Desc": "Offer the bandits some beans.",
+            "decision2": {
+                "resource": "Food",
+                "resourceAmount": 5,
+                "outcomeSuccess": {
+                    "finalDescription": "You offer some of your food to the bandits. \"Aww yeah! I love beans!!\" one of them exclaims. They hastily gather up your offering and skip off into the distance.",
+                    "someoneDies": 0
+                },
+                "outcomeFailure": {
+                    "finalDescription": "You offer some of your food to the bandits. \" This is hardly enough beans! I guess we will just take one of you as payment!\"",
+                    "someoneDies": 1
+                }
+            },
+            "decision3Desc": "Offer the bandits some money",
+            "decision3": {
+                "resource": "Money",
+                "resourceAmount": 5,
+                "outcomeSuccess": {
+                    "finalDescription": "You offer some of your money to the bandits. \" Oooh weee! We love money!\" the bandits greedily scoop up your coins and run off into the distance, singing to themselves.",
+                    "someoneDies": 0
+                },
+                "outcomeFailure": {
+                    "finalDescription": "You offer some of your money to the bandits. \" This isn't even enough to buy a freddo! How about we take one of you instead!\"",
+                    "someoneDies": 1
+                }
+            },
+            "decision4Desc": "Trick them with comedy",
+            "decision4": {
+                "resource": "Comedy",
+                "resourceAmount": 2,
+                "outcomeSuccess": {
+                    "finalDescription": "You and mum rat get out the wagon. You flap your arms and pretend to be a chicken, whilst mum rat jumps up and down proclaiming that she is a frog. The raccoons seem confused at first, but start laughing. \"You guys are quirky! We're just going to let you pass without a toll!\"",
+                    "someoneDies": 0
+                },
+                "outcomeFailure": {
+                    "finalDescription": "You get out of the wagon and try to do a handstand to impress the bandits, however your arm slips and you fall flat on your face. The raccoons point and laugh at you. \"Har har har! Let's just kill this joker and steal his stuff!\"",
+                    "someoneDies": 1
+                }
+            }
+            
         }]
     }
