@@ -4,8 +4,10 @@ using UnityEngine;
 using TMPro;
 
 
-public class EventPlayer : MonoBehaviour 
+public class EventPlayer : MonoBehaviour
 {
+  public GameObject invobj;
+
     [SerializeField]
     private GameObject initialTextBox, option1, option2, option3, option4;
     [SerializeField]
@@ -13,7 +15,7 @@ public class EventPlayer : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI option1Text, option2Text, option3Text, option4Text;
     public Event currentEvent;
-    
+
     [SerializeField]
     private Inventory inventory;
     [SerializeField]
@@ -21,6 +23,9 @@ public class EventPlayer : MonoBehaviour
     public bool playingOutcome = false;
     private bool gameOver = false;
     void Start() {
+        if(Inventory.Instance != null){
+          inventory = Inventory.Instance;
+        }
         initialTextBox.SetActive(false);
         option1.SetActive(false);
         option2.SetActive(false);
@@ -32,7 +37,7 @@ public class EventPlayer : MonoBehaviour
         Debug.Log("Playing event " + eventToPlay.description);
         currentEvent = eventToPlay;
         initialTextBox.SetActive(true);
-        
+
         string backgroundText = eventToPlay.description;
         Debug.Log("Calling initial text box text with " + backgroundText);
         StartCoroutine(initialTextBoxText.NewTextToDisplay(backgroundText));
@@ -60,25 +65,25 @@ public class EventPlayer : MonoBehaviour
             option3.SetActive(true);
             option4.SetActive(true);
         }
-        
+
 
     }
 
     public void Option1Select() {
-        Debug.Log("Selected option 1"); 
-        TriggerOption(currentEvent.decision1);  
+        Debug.Log("Selected option 1");
+        TriggerOption(currentEvent.decision1);
     }
 
     public void Option2Select() {
-        Debug.Log("Selected option 2");   
+        Debug.Log("Selected option 2");
         TriggerOption(currentEvent.decision2);
     }
     public void Option3Select() {
-        Debug.Log("Selected option 3");   
+        Debug.Log("Selected option 3");
         TriggerOption(currentEvent.decision3);
     }
     public void Option4Select() {
-        Debug.Log("Selected option 4");   
+        Debug.Log("Selected option 4");
         TriggerOption(currentEvent.decision4);
     }
 
@@ -138,7 +143,7 @@ public class EventPlayer : MonoBehaviour
             case "Child" :
                 Debug.Log("Child case");
                 Debug.Log("lives amount: " + wagon.Lives);
-                
+
                 if (wagon.Lives < 4) {
                     Debug.Log("Failure outcome");
                     PlayOutcome(option.outcomeFailure);
@@ -186,9 +191,7 @@ public class EventPlayer : MonoBehaviour
         Debug.Log("lives after event: " + wagon.Lives);
         StartCoroutine(initialTextBoxText.NewTextToDisplay(outcomeText));
 
-        
-        
-        
     }
+
 
 }

@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 537312734}
   - component: {fileID: 537312733}
   m_Layer: 0
-  m_Name: Inventory
+  m_Name: PlayerData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

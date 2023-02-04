@@ -10,14 +10,13 @@ public class Wagon: MonoBehaviour{
   public int Lives;
   public Sprite WagonSprite;
   public string spriteString;
-
+  public Inventory inventory;
 public Wagon(){
     Beaver = true;
     Traveler = false;
     Travel = 0;
     Lives = 4;
     spriteString = "Wagon1";
-
 }
 
 public void killBeaver(){
@@ -30,8 +29,8 @@ public void addTraveler(){
 }
 
 public int calcLives(int Change){
-   Lives = Lives - Change;
-  if (Lives < 1){
+   int newV = Lives - Change;
+  if (newV < 0){
     return -1;
   }
     return 0;

@@ -18,6 +18,7 @@ public class Inventory: MonoBehaviour{
   public TextMeshProUGUI FoodDisplay;
   public TextMeshProUGUI ToolsDisplay;
   public TextMeshProUGUI BulletsDisplay;
+   public static Inventory Instance;
 
 
 public Inventory(){
@@ -90,4 +91,19 @@ void Update(){
      ToolsDisplay.text = Tools.ToString();
      BulletsDisplay.text = Bullets.ToString();
 }
+void Awake()
+    {
+        this.InstantiateController();
+    }
+
+    private void InstantiateController() {
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if(this != Instance) {
+            Destroy(this.gameObject);
+        }
+    }
 }
