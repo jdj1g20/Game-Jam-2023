@@ -9,11 +9,11 @@ public class TextRevealScript : MonoBehaviour
 
     private TextMeshProUGUI text;
     private bool spaceDetected = false;
-
+    public float speed = 0.06f;
     public IEnumerator NewTextToDisplay(string textToDisplay)
     {
         spaceDetected = false;
-        Debug.Log("Playing text " + textToDisplay);   
+        Debug.Log("Playing text " + textToDisplay);
 
         text = gameObject.GetComponent<TextMeshProUGUI>();
         text.text = textToDisplay;
@@ -24,7 +24,7 @@ public class TextRevealScript : MonoBehaviour
         text.maxVisibleCharacters = 0;
 
         spaceDetected = false;
-        
+
         for (int visibleCount = 1; visibleCount <= totalVisibleChars; visibleCount++)
         {
             text.maxVisibleCharacters = visibleCount;
@@ -35,7 +35,7 @@ public class TextRevealScript : MonoBehaviour
                 break;
 
             }
-            yield return new WaitForSeconds(0.06f);
+            yield return new WaitForSeconds(speed);
 
         }
         Debug.Log("Text Ended");

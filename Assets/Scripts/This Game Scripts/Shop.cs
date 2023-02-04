@@ -73,7 +73,7 @@ public int BuyTools(int Amount,int Money){ //returns cost of product or -1 if it
 
 
 
-void onClickFood(){
+public void onClickFood(){
   int amnt = 1; //maybe usefull in future
   int outcome =  BuyFood(amnt,inventory.Money);
   if (outcome >0 ){ //sucess
@@ -92,7 +92,7 @@ void onClickFood(){
   }
 }
 
-void onClickTool(){
+public void onClickTool(){
   int amnt = 1; //maybe usefull in future
   int outcome =  BuyTools(amnt,inventory.Money);
   if (outcome >0 ){ //sucess
@@ -111,7 +111,7 @@ void onClickTool(){
   }
 }
 
-void onClickBullet(){
+public void onClickBullet(){
   int amnt = 1; //maybe usefull in future
   int outcome =  BuyBullets(amnt,inventory.Money);
   if (outcome >0 ){ //sucess
@@ -130,7 +130,7 @@ void onClickBullet(){
   }
 }
 
-void onClickRat(){
+public void onClickRat(){
   status = "Squeeeeeek";
 }
 
