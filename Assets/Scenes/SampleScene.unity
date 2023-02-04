@@ -273,7 +273,9 @@ MonoBehaviour:
         finalDescription: 
         someoneDies: 0
     decision4Desc: 
-  inventory: {fileID: 0}
+  inventory: {fileID: 2072445108}
+  wagon: {fileID: 1304746941}
+  playingOutcome: 0
 --- !u!4 &126445493
 Transform:
   m_ObjectHideFlags: 0
