@@ -39,6 +39,7 @@ public void addTraveler(){
 
 public int calcLives(int Change){
    int newV = Lives -  Change;
+   Lives = Lives - Change;
    if(Change ==-1){
      addTraveler();
      return 0;
@@ -46,17 +47,17 @@ public int calcLives(int Change){
   if (newV < 0){
     return -1;
   }
-  Lives = Lives - Change;
   chooseSprite();
-    return 0;
+  return 0;
 }
 
 public void chooseSprite(){
   int life = Lives;
-  travelerObj.SetActive(Traveler);
+
   if(Traveler){
     life = life -1;
    }
+   travelerObj.SetActive(Traveler&&displayBool);
    dispObj.SetActive(displayBool);
   switch (life){
     case 1:

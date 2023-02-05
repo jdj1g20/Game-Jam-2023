@@ -32,6 +32,12 @@ public Shop(){
   ToolCost = 10;
   status = "";
 }
+  void Start() {
+    if(Inventory.Instance != null){
+      inventory = Inventory.Instance;
+  }
+  inventory.resetInventory();
+}
 
 public int BuyFood(int Amount, int Money){ //returns cost of product or -1 if it it to much for the store or 0 if not enough money
   if (Food4S-Amount < 0){

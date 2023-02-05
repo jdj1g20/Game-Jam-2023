@@ -28,6 +28,18 @@ public Inventory(){
     maxMoney = 1000;
     maxTools = 10;
 }
+
+public void resetInventory(){
+  Bullets = 0;
+    Food = 0;
+    Money = 100;
+    Tools = 0;
+    Weight = 0.0f;
+    maxBullets = 10;
+    maxFood = 50;
+    maxMoney = 1000;
+    maxTools = 10;
+}
 //returns 0 if ok 1 if over limit and -1 if under limit
 public int calcFood(int Change){
    int newV = Food + Change;

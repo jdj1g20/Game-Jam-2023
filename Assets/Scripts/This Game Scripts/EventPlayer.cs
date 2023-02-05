@@ -40,6 +40,7 @@ public class EventPlayer : MonoBehaviour
         continueButton.SetActive(false);
     }
     public void PlayEvent(Event eventToPlay) {
+        continueButton.SetActive(false);
         dayEnd = false;
         playingOutcome = false;
         Debug.Log("Playing event " + eventToPlay.description);
@@ -65,6 +66,7 @@ public class EventPlayer : MonoBehaviour
             Debug.Log("Finished reading outcome");
             if (gameOver) {
                 Debug.Log("GameOver screen");
+                continueButton.SetActive(true);
             } else
             {
                 Debug.Log("Next event");
@@ -75,6 +77,7 @@ public class EventPlayer : MonoBehaviour
             Debug.Log("Day end text finished");
             if (gameOver) {
                 Debug.Log("GameOver Screen");
+                continueButton.SetActive(true);
             } else {
                 Debug.Log("Start next day");
 
@@ -116,6 +119,7 @@ public class EventPlayer : MonoBehaviour
     public void ContinueSelect() {
         Debug.Log("Selected continue button");
         if(gameOver){
+          Debug.Log("lol end now");
           SceneMan.loadScene("EndScreen");
         }else{
         if (dayEnd) {
@@ -131,6 +135,7 @@ public class EventPlayer : MonoBehaviour
             wagon.displayBool = false;
             wagon.chooseSprite();
             BackroundSelect(0);
+
             PlayDayEnd();
         }
         }
@@ -163,12 +168,16 @@ public class EventPlayer : MonoBehaviour
         Debug.Log("People Alive: " + peopleAlive);
 
         string dayEndText = "";
+        if(wagon.Lives <= 0){
+          gameOver=true;
 
+          StartCoroutine(initialTextBoxText.NewTextToDisplay("You did not reach the campfire this night as you are dead."));
+        }else{
         // Check if someone dies of dysentery
         float dysenteryChance = Random.Range(0,1f);
         if (dysenteryChance < 0.05f) {
             Debug.Log("O no someone died of dysentery");
-            wagon.Lives -= 1;
+            wagon.calcLives(1);
             if (wagon.Lives <= 0) {
                 dayEndText += "You died of dysentery. Good job.";
                 gameOver = true;
@@ -201,7 +210,7 @@ public class EventPlayer : MonoBehaviour
         }
         Debug.Log("Traveler eat food");
         if (wagon.Traveler) {
-            int travellerEatFood = inventory.calcFood(1);
+            int travellerEatFood = inventory.calcFood(-1);
             if (travellerEatFood == -1) {
                 inventory.Food = 0;
                 dayEndText += "The traveller had no food and starved to death.\n";
@@ -209,7 +218,11 @@ public class EventPlayer : MonoBehaviour
                 dayEndText += "The traveller ate 1 food\n";
             }
         }
+        if(wagon.Lives <= 0){
+          gameOver=true;
+        }
         StartCoroutine(initialTextBoxText.NewTextToDisplay(dayEndText));
+      }
     }
 
 
