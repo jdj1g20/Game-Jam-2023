@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class EventPlayer : MonoBehaviour
 {
   public GameObject invobj;
+  public MainGameLoopScript mainGameLoopScript;
 
     [SerializeField]
     private GameObject initialTextBox, option1, option2, option3, option4, continueButton;
@@ -110,7 +111,8 @@ public class EventPlayer : MonoBehaviour
         Debug.Log("Selected continue button");
         if (dayEnd) {
             Debug.Log("Starting next event");
-
+            mainGameLoopScript.loadNextEvent();
+            
         } else {
 
             continueButton.SetActive(false);
@@ -166,11 +168,15 @@ public class EventPlayer : MonoBehaviour
             Debug.Log("No-one died of dysentery");
             dayEndText += "No-one died of dysentery\n";
         }
-
-        if (inventory.calcFood(wagon.Lives * -1) == -1) {
+        Debug.Log("Family eat food. Starting food = " + inventory.Food);
+        int eatFood = inventory.calcFood(wagon.Lives * -1);
+        if (eatFood == -1) {
             if (wagon.Lives > 0) {
+                Debug.Log("Run out of food, new food = " + inventory.Food);
+                inventory.Food = 0;
                 dayEndText += "Your family ate all your food, but didn't have enough. Someone starved to death in the night.\n";
             } else {
+                inventory.Food = 0;
                 dayEndText += "You've run out of food and starved to death in the night. Good job.\n";
                 gameOver = true;
                 StartCoroutine(initialTextBoxText.NewTextToDisplay(dayEndText));
@@ -180,9 +186,11 @@ public class EventPlayer : MonoBehaviour
         } else {
             dayEndText += "Your family ate " + wagon.Lives + " food.\n";
         }
-
+        Debug.Log("Traveler eat food");
         if (wagon.Traveler) {
-            if (inventory.calcFood(1) == -1) {
+            int travellerEatFood = inventory.calcFood(1);
+            if (travellerEatFood == -1) {
+                inventory.Food = 0;
                 dayEndText += "The traveller had no food and starved to death.\n";
             } else {
                 dayEndText += "The traveller ate 1 food\n";
