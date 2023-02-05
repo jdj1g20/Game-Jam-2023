@@ -20,7 +20,7 @@ public class Inventory: MonoBehaviour{
 public Inventory(){
   Bullets = 0;
     Food = 0;
-    Money = 100;
+    Money = 70;
     Tools = 0;
     Weight = 0.0f;
     maxBullets = 10;
@@ -32,7 +32,7 @@ public Inventory(){
 public void resetInventory(){
   Bullets = 0;
     Food = 0;
-    Money = 100;
+    Money = 70;
     Tools = 0;
     Weight = 0.0f;
     maxBullets = 10;

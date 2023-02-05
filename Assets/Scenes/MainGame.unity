@@ -849,9 +849,9 @@ MonoBehaviour:
   playingOutcome: 0
   Backround: {fileID: 1768321210}
   Backround1: {fileID: 21300000, guid: 78b9466fc13fda2609bb49699e01bd5e, type: 3}
-  Backround2: {fileID: 21300000, guid: 96aea683eccf1a5e39bc064770d5108a, type: 3}
-  Backround3: {fileID: 21300000, guid: a24bb6f2daf6b66829bea06cdfdc2da4, type: 3}
-  Backround4: {fileID: 0}
+  Backround2: {fileID: 21300000, guid: a24bb6f2daf6b66829bea06cdfdc2da4, type: 3}
+  Backround3: {fileID: 21300000, guid: 96aea683eccf1a5e39bc064770d5108a, type: 3}
+  Backround4: {fileID: 21300000, guid: 53e8471192ea7e7efb5f6020b17dc578, type: 3}
   Backround5: {fileID: 0}
   Campfire: {fileID: 21300000, guid: d026602b9cd142a94b62727e8feb53aa, type: 3}
 --- !u!4 &126445493
@@ -944,7 +944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171056934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.98, y: -1.43, z: -8}
+  m_LocalPosition: {x: 2.98, y: -1.43, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -991,7 +991,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: f8e894482474d4974882555b27e04c78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
