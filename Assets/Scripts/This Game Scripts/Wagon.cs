@@ -20,6 +20,9 @@ public Wagon(){
     Lives = 4;
     spriteString = "Wagon1";
 }
+void Start(){
+  chooseSprite();
+}
 
 public void killBeaver(){
   Beaver = false;
@@ -70,7 +73,5 @@ public void chooseSprite(){
 
 
 }
-  void Update(){
-    chooseSprite();
-  }
+
 }

@@ -15,6 +15,7 @@ public class EventPlayer : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI option1Text, option2Text, option3Text, option4Text;
     public Event currentEvent;
+    public SpriteLoader sprtldr;
 
     [SerializeField]
     private Inventory inventory;
@@ -42,6 +43,7 @@ public class EventPlayer : MonoBehaviour
         initialTextBox.SetActive(true);
 
         string backgroundText = eventToPlay.description;
+        //sprtldr.SetScene("Traveler");//eventToPlay.sceneName);
         Debug.Log("Calling initial text box text with " + backgroundText);
         StartCoroutine(initialTextBoxText.NewTextToDisplay(backgroundText));
 

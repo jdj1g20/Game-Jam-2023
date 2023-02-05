@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 
 public static class  SceneMan{
+
+
   public static void loadScene(string Name){
     Debug.Log("in load scene");
     Debug.Log(Name);
@@ -15,4 +17,6 @@ public static class  SceneMan{
 public static void ExitGame(){
   Application.Quit();
 }
+
+
 }
