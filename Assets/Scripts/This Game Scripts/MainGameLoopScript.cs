@@ -38,7 +38,7 @@ public class MainGameLoopScript : MonoBehaviour
     }
     public void loadNextEvent(){
       eventNo = eventNo +1;
-      if(eventNo > 3){
+      if(eventNo > 4){
           SceneMan.loadScene("EndVictory");
       }else{
       Event eventToPlay = eventsList[eventNo];
