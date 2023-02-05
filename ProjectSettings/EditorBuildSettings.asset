@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 6c0149e73f80f4c0ca27aa2094e09ebf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Travel.unity
     guid: b39dd84f7a9a7acc582194118cd13803
   - enabled: 1
@@ -20,7 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: c01cf70d8d943850b8d0369a4fde4159
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Campfire.unity
     guid: 4d7d234bc76fa9762b5ccaa207f95480
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 0fe2dc31501d8c6f69512f6139f64101
+  - enabled: 1
+    path: Assets/Scenes/EndVictory.unity
+    guid: 31cb40f0a8831b3eabfaf0156f2c50e1
   m_configObjects: {}
