@@ -89,10 +89,10 @@ public void onClickFood(){
         int a1 = inventory.calcMoney(-outcome);
         if (a1 == -1){
           Debug.Log("OutOfMoney");
-          status = "You seem to be out of money son";
+          status = "You seem to be out of money, son.";
         }else{
           Debug.Log("Sucess");
-          status = "YeeHaw Thanks for Buisness";
+          status = "YeeHaw! Thanks for your business!";
         }
       }
   }else{
@@ -105,7 +105,7 @@ public void onClickTool(){
   int outcome =  BuyTools(amnt,inventory.Money);
   if (outcome >0 ){ //sucess
       int a2 = inventory.calcTools(amnt);
-      status = "You already have the maximum amount your chart carries";
+      status = "You already have the maximum amount your cart carries";
       if (a2 == 1){
            Tools4S =  Tools4S+amnt; //return item
       }else{
@@ -113,11 +113,11 @@ public void onClickTool(){
         if (a1 == -1){
           status = "Out of money";
         }else{
-          status = "Hope it serves you well";
+          status = "Hope it serves you well!";
         }
       }
   }else{
-    status = "I aint got no more tools!";
+    status = "I ain't got no more tools!";
   }
 }
 
@@ -127,18 +127,18 @@ public void onClickBullet(){
   if (outcome >0 ){ //sucess
       int a2 = inventory.calcBullets(amnt);
       if (a2 == 1){
-          status = "You gonna shoot up an entire town? you got enough";
+          status = "You gonna shoot up an entire town? You got enough bullets mate.";
            Bullets4S =  Bullets4S+amnt; //return item
       }else{
         int a1 = inventory.calcMoney(-outcome);
         if (a1 == -1){
-          status = "No Cash, no Sale";
+          status = "No Cash, no sale";
         }else{
-          status = "Yee thats what Im talking about";
+          status = "Yee, that's what I'm talking about!";
         }
       }
   }else{
-    status = "All outa Bullets";
+    status = "I'm all outta bullets";
   }
 }
   public void onClickRat(){

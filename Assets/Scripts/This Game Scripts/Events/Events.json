@@ -2,9 +2,9 @@
     "events": [
         {
         	"sceneName": "Traveler",
-            "description": "Around Midday you meet a traveler on the road, he looks a bit rough and lost. He stops your wagon and says to you: \n \" Howdy there, how y'all doin, the sherif in Orato has decided to exile me for no particular reason. I am very hungry however could you not spare me a bit of bean?\" What do you do?",
+            "description": "Around Midday you meet a traveller on the road, he looks a bit rough and lost. He stops your wagon and says to you: \n \" Howdy there, how y'all doin'? The sheriff in Orato has decided to exile me for no particular reason. I am very hungry, could you not spare me a bit of bean?\" What do you do?",
             "background": "background1",
-            "decision1Desc": "Shoot!",
+            "decision1Desc": "Shoot him!",
             "decision1": {
                 "resource": "Bullets",
                 "resourceAmount": 1,
@@ -22,11 +22,11 @@
                 "resource": "Food",
                 "resourceAmount": 1,
                 "outcomeSuccess": {
-                    "finalDescription": "You share some food with the rat, he shares his tragic backstory with you.",
+                    "finalDescription": "You share some food with the rat. He shares his tragic backstory with you and then walks off into the distance.",
                     "someoneDies": 0
                 },
                 "outcomeFailure": {
-                    "finalDescription": "You loudly proclaim \" Yee-haw, I got food for days \" before finding out that you are out of beans. Reaching in your beanbag you come out empty handed.\n \"Is this some kind of a joke, you know what I'll eat one of you. Yeah, I am a cannibal. The strange rat knocks you out and steals one of your family members. What a way to go.",
+                    "finalDescription": "You loudly proclaim \" Yee-haw, I got food for days \". Reaching into your beanbag your hand comes out empty beanless. You realise that you are out of beans. \n \"Is this some kind of a joke, you know what, I'll eat one of you. Yeah, I am a cannibal. The strange rat knocks you out and steals one of your family members. What a way to go.",
                     "someoneDies": 1
                 }
             },
@@ -39,7 +39,7 @@
                     "someoneDies": 1
                 },
                 "outcomeFailure": {
-                    "finalDescription": "You say to the man \" I will give you my child for you not to bother me\" He says slurping as if hungry \" Yummy Yummy, I mean I reckon that would work Cowrat\", as you reach into your wagon you realise your child is dead. The stranger feels sad for you and you grants you botherfree passage.",
+                    "finalDescription": "You say to the man \" I will give you my child if you do not to bother me\" He starts slurping, as if hungry, and says \" Yummy Yummy, I mean, I reckon that would work Cowrat!\", as you reach into your wagon you realise that your child is dead. The stranger feels sad for you and you grants you botherfree passage.",
                     "someoneDies": 0
                 }
             },
@@ -48,11 +48,11 @@
                 "resource": "Food",
                 "resourceAmount": 3,
                 "outcomeSuccess": {
-                    "finalDescription": "As you pass by you hear the back of your trusty wagon rip and a scream. As you look back one of your family members are missing and some beans.",
+                    "finalDescription": "As you pass by you hear the back of your trusty wagon rip and a scream. You look back to see the traveller running away holding one of your family members and some cans of beans.",
                     "someoneDies": 1
                 },
                 "outcomeFailure": {
-                    "finalDescription": "As you pass by you hear the back of your trusty wagon rip and a scream. As you look back two of your family members are missing.",
+                    "finalDescription": "As you pass by you hear the back of your trusty wagon rip and a scream. You look back to see the traveller running away carrying two of your family members. He must be really strong.",
                     "someoneDies": 2
                 }
             }
