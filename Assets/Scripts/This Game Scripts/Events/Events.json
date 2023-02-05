@@ -10,7 +10,7 @@
                 "resourceAmount": 1,
                 "outcomeSuccess": {
                     "finalDescription": "You take out your trusty Ratvolver and shoot at the stranger, he expertly dodges the bullet and says \" I like how you think stranger, why dont I join you on your travels? \" \n You gain a new rat.",
-                    "someoneDies": 1
+                    "someoneDies": -1
                 },
                 "outcomeFailure": {
                     "finalDescription": "You take out your gun and pull the trigger, and the gun does not do the shooting. You are out of bullets. The stranger runs at you and knocks you out. As you wake up you find that one of your family members is missing.",
@@ -61,18 +61,18 @@
         {
         
         	"sceneName": "Rockslide",
-            "description": "You are making your way through a narrow pass when suddenly there",
+            "description": "You are making your way through a narrow pass when suddenly there is a booming noise and rocks begin to fall infront of your wagon. There is a large pile of debris blocking the path, what do you do?",
             "background": 2,
-            "decision1Desc": "Shoot!",
+            "decision1Desc": "Shoot the rocks!",
             "decision1": {
                 "resource": "Bullets",
                 "resourceAmount": 1,
                 "outcomeSuccess": {
-                    "finalDescription": "You take out your trusty Ratvolver and shoot at the stranger, he expertly dodges the bullet and says \" I like how you think stranger, why dont I join you on your travels? \" \n You gain a new rat.",
+                    "finalDescription": "You whip out your ratvolver and fire at the rocks. BANG!!! Somehow the bullet manages to hit a stick of dynamite that someone left there earlier. The debris is blasted away, but a loose rock flies into your wagon and kills one of your family members.",
                     "someoneDies": 1
                 },
                 "outcomeFailure": {
-                    "finalDescription": "You take out your gun and pull the trigger, and the gun does not do the shooting. You are out of bullets. The stranger runs at you and knocks you out. As you wake up you find that one of your family members is missing.",
+                    "finalDescription": "You confidently step up to the rock and bring out your ratvolver. You carefully aim it at the rocks and pull the trigger. CLICK. ",
                     "someoneDies": 1
                 }
             },
@@ -120,7 +120,7 @@
         },
         {
         	"sceneName": "Bandits",
-            "description": "Late at night, three raccoon bandits step out infront of your wagon holding guns! \n \" There be a toll to pass through this here passage. We'd advise you to pay up with whatever you have, otherwise things might get messy...\" \n What do you do?",
+            "description": "Three raccoon bandits step out infront of your wagon holding guns! \n \" There be a toll to pass through this here passage. We'd advise you to pay up with whatever you have, otherwise things might get messy...\" \n What do you do?",
             "background": 1,
             "decision1Desc": "Shoot the bandits!",
             "decision1": {
