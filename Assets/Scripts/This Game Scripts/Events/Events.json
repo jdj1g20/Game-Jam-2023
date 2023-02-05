@@ -72,47 +72,47 @@
                     "someoneDies": 1
                 },
                 "outcomeFailure": {
-                    "finalDescription": "You confidently step up to the rock and bring out your ratvolver. You carefully aim it at the rocks and pull the trigger. CLICK. ",
-                    "someoneDies": 1
+                    "finalDescription": "You confidently step up to the rock and bring out your ratvolver. You carefully aim it at the rocks and pull the trigger. CLICK. You are out of bullets. Your family get to work manually moving the rocks, but someone steps on some loose dynamite which blows up in a massive explosion. The rocks are cleared but some people died.",
+                    "someoneDies": 2
                 }
             },
-            "decision2Desc": "Share some beans with the rat.",
+            "decision2Desc": "Throw money at the rocks.",
             "decision2": {
-                "resource": "Food",
-                "resourceAmount": 1,
+                "resource": "Money",
+                "resourceAmount": 5,
                 "outcomeSuccess": {
-                    "finalDescription": "You share some food with the rat, he shares his tragic backstory with you.",
+                    "finalDescription": "Some friendly looking moles, holding baguettes and wearing berets, emerge out of the ground and take your money. One of them comes up to you and says \" Hew hew hew monssieur, we can clear out theese rockslide for you mon ami!\". The moles proceed to dig away at the rocks, opening the path for you to continue.",
                     "someoneDies": 0
                 },
                 "outcomeFailure": {
-                    "finalDescription": "You loudly proclaim \" Yee-haw, I got food for days \" before finding out that tyou are out of beans. Reaching in your beanbag you come out empty handed.\n \"Is this some kind of a joke, you know what Ill eat one of you, yeah I am a canibal. The Strange rat knocks you out and steals one of your family members. What a way to go.",
-                    "someoneDies": 0
-                }
-            },
-            "decision3Desc": "Give him your child",
-            "decision3": {
-                "resource": "Child",
-                "resourceAmount": 1,
-                "outcomeSuccess": {
-                    "finalDescription": "Weirdly enough, after you send your child to the strange man, your son shouts \"Father, I have finaly found you!\" you realise suddenly that your child has not been your own but someone who replaced your own ages ago. When did this happen? How did a child manage this? Who is this strange man? You will never know.",
+                    "finalDescription": "After you toss money on the floor, a group of angry looking moles, holding baguettes and wearing berets, emerge from the ground! \"Monssieur! You insult us with your petty offer of coins! We will just take your famille instead! Haw haw haw!\". The moles clear out the rocks, but grab a member of your family and head off down a hole.",
                     "someoneDies": 1
-                },
-                "outcomeFailure": {
-                    "finalDescription": "You say to the man \" I will give you my child for you not to bother me\" He says slurping as if hungry \" Yummy Yummy, I mean I recon that would work Cowrat\", as you reach into your wagon you return childless. The stranger feels sad for you and you grants you botherfree passage.",
-                    "someoneDies": 0
                 }
             },
-            "decision4Desc": "Ignore",
-            "decision4": {
-                "resource": "Food",
+            "decision3Desc": "Use some tools to clear the rocks",
+            "decision3": {
+                "resource": "Tools",
                 "resourceAmount": 3,
                 "outcomeSuccess": {
-                    "finalDescription": "As you pass by you hear the back of your trusty wagon rip and a scream. As you look back one of your family members are missing and some beans.",
-                    "someoneDies": 1
+                    "finalDescription": "You grab up some of your tools and get to work chipping away at the rocks. You quickly clear enough for your wagon to fit through.",
+                    "someoneDies": 0
                 },
                 "outcomeFailure": {
-                    "finalDescription": "As you pass by you hear the back of your trusty wagon rip and a scream. As you look back two of your family members are missing.",
-                    "someoneDies": 2
+                    "finalDescription": "You grab up your pultry supply of tools and get to work chipping away at the rocks. One of your family members swings their pickaxe, but stumbles and accidently impales themselves. Ouch.",
+                    "someoneDies": 1
+                }
+            },
+            "decision4Desc": "Clear away the rocks by hand",
+            "decision4": {
+                "resource": "Food",
+                "resourceAmount": 5,
+                "outcomeSuccess": {
+                    "finalDescription": "Your whole family get out the wagon and start clearing away the rocks. It takes a long time and many snack breaks, but you finally make enough room to get the wagon through the passage.",
+                    "someoneDies": 0
+                },
+                "outcomeFailure": {
+                    "finalDescription": "Your whole family get out the wagon and start clearing away the rocks. It is very long and tiring work. You finally clear a route for your wagon, however one of your family members collapses from exhaustion.",
+                    "someoneDies": 1
                 }
             }
      
