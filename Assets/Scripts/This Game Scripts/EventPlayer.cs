@@ -46,8 +46,14 @@ public class EventPlayer : MonoBehaviour
         currentEvent = eventToPlay;
         initialTextBox.SetActive(true);
 
+        wagon.displayBool = true;
+        wagon.chooseSprite();
+
+        sprtldr.SetScene(eventToPlay.sceneName);
+        BackroundSelect(eventToPlay.background);
+
         string backgroundText = eventToPlay.description;
-        sprtldr.SetScene("Traveler");
+
         Debug.Log("Calling initial text box text with " + backgroundText);
         StartCoroutine(initialTextBoxText.NewTextToDisplay(backgroundText));
 
@@ -111,13 +117,16 @@ public class EventPlayer : MonoBehaviour
         Debug.Log("Selected continue button");
         if (dayEnd) {
             Debug.Log("Starting next event");
+
             mainGameLoopScript.loadNextEvent();
-            
+
         } else {
 
             continueButton.SetActive(false);
             // change background to campfire
             sprtldr.SetScene("");
+            wagon.displayBool = false;
+            wagon.chooseSprite();
             BackroundSelect(0);
             PlayDayEnd();
         }

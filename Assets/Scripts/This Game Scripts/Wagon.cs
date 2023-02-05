@@ -8,11 +8,13 @@ public class Wagon: MonoBehaviour{
   public bool Traveler;
   public int Travel;
   public int Lives;
+  public bool displayBool;
+
   public Sprite WagonSprite1, WagonSprite2, WagonSprite3, WagonSprite4;
   public string spriteString;
   public Inventory inventory;
   public SpriteRenderer spriterender;
-  public GameObject travelerObj;
+  public GameObject travelerObj, dispObj;
 public Wagon(){
     Beaver = true;
     Traveler = false;
@@ -21,6 +23,8 @@ public Wagon(){
     spriteString = "Wagon1";
 }
 void Start(){
+
+  displayBool = true;
   chooseSprite();
 }
 
@@ -50,7 +54,7 @@ public void chooseSprite(){
   if(Traveler){
     life = life -1;
    }
-
+   dispObj.SetActive(displayBool);
   switch (life){
     case 1:
     spriterender.sprite = WagonSprite1;
