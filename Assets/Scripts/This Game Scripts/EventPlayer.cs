@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.UI;
 
 public class EventPlayer : MonoBehaviour
 {
@@ -24,6 +24,9 @@ public class EventPlayer : MonoBehaviour
     public bool playingOutcome = false;
     private bool gameOver = false;
     private bool dayEnd = false;
+
+    public Image Backround;
+    public Sprite Backround1,Backround2,Backround3,Backround4,Backround5,Campfire;
     void Start() {
         if(Inventory.Instance != null){
           inventory = Inventory.Instance;
@@ -112,10 +115,30 @@ public class EventPlayer : MonoBehaviour
 
             continueButton.SetActive(false);
             // change background to campfire
+            sprtldr.SetScene("");
+            BackroundSelect(0);
             PlayDayEnd();
         }
-
-
+    }
+    public void BackroundSelect(int inn){
+      //0 is campfire
+      //1 is basic
+      //2 is rocks
+      //3 is River
+      switch(inn){
+        case 0:
+        Backround.sprite = Campfire;
+        break;
+        case 1:
+        Backround.sprite = Backround1;
+        break;
+        case 2:
+        Backround.sprite = Backround2;
+        break;
+        case 3:
+        Backround.sprite = Backround3;
+        break;
+      }
     }
 
     private void PlayDayEnd() {

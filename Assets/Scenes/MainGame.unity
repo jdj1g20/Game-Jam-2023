@@ -664,6 +664,7 @@ MonoBehaviour:
   option3Text: {fileID: 378995735}
   option4Text: {fileID: 1413795548}
   currentEvent:
+    sceneName: 
     description: 
     background: 
     decision1:
@@ -710,6 +711,13 @@ MonoBehaviour:
   inventory: {fileID: 0}
   wagon: {fileID: 1304746941}
   playingOutcome: 0
+  Backround: {fileID: 1768321210}
+  Backround1: {fileID: 0}
+  Backround2: {fileID: 0}
+  Backround3: {fileID: 0}
+  Backround4: {fileID: 0}
+  Backround5: {fileID: 0}
+  Campfire: {fileID: 0}
 --- !u!4 &126445493
 Transform:
   m_ObjectHideFlags: 0
