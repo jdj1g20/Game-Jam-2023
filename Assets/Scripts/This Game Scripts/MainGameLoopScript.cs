@@ -40,6 +40,8 @@ public class MainGameLoopScript : MonoBehaviour
       eventNo = eventNo +1;
       Event eventToPlay = eventsList[eventNo];
       Debug.Log("Playing Event" + eventToPlay.description);
+
+
       eventPlayer.PlayEvent(eventToPlay);
     }
 }
