@@ -49,7 +49,7 @@ public void SetScene(string descriptor){
         case "Bandits":
         RacoonB = true;
         break;
-        case "Snake":
+        case "Ratter":
         SnakeB = true;
         break;
     }

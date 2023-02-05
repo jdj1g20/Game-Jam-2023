@@ -158,6 +158,10 @@ public class EventPlayer : MonoBehaviour
         case 3:
         Backround.sprite = Backround3;
         break;
+        case 4:
+        Backround.sprite = Backround4;
+        break;
+
       }
     }
 

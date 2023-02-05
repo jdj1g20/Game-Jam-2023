@@ -56,10 +56,10 @@
                     "someoneDies": 2
                 }
             }
-            
+
         },
         {
-        
+
         	"sceneName": "Rockslide",
             "description": "You are making your way through a narrow pass when suddenly there is a booming noise and rocks begin to fall infront of your wagon. There is a large pile of debris blocking the path, what do you do?",
             "background": 2,
@@ -115,13 +115,13 @@
                     "someoneDies": 1
                 }
             }
-     
-        
+
+
         },
         {
         	"sceneName": "Bandits",
             "description": "Late at night, three raccoon bandits step out infront of your wagon holding guns! \n \" There be a toll to pass through this here passage. We'd advise you to pay up with whatever you have, otherwise things might get messy...\" \n What do you do?",
-            "background": 1,
+            "background": 4,
             "decision1Desc": "Shoot the bandits!",
             "decision1": {
                 "resource": "Bullets",
@@ -174,7 +174,7 @@
                     "someoneDies": 1
                 }
             }
-            
+
         },
         {
         "sceneName": "River",
@@ -215,7 +215,7 @@
                     "someoneDies": 0
                 },
                 "outcomeFailure": {
-                    "finalDescription": "You remember your grandfather sitting you on his lap and telling you that in life, throwing money at your problems is sure to make them go away. You glance at your empty coin purse, look back at the wagon and tell your family to swim across. One rat gets in before you glance back up stream, and notice a bridge. Your family member couldn't actually swim and ends up drowning", 
+                    "finalDescription": "You remember your grandfather sitting you on his lap and telling you that in life, throwing money at your problems is sure to make them go away. You glance at your empty coin purse, look back at the wagon and tell your family to swim across. One rat gets in before you glance back up stream, and notice a bridge. Your family member couldn't actually swim and ends up drowning",
                     "someoneDies": 1
                 }
             },
@@ -235,10 +235,10 @@
         },
 
         {
-        
+
         	"sceneName": "Ratter",
             "description": "A large figure appears before your wagon, blocking the way forward. You look up to see a snake who says to itself \"What'sss that? A tassty ssnack?\"",
-            "background": 2,
+            "background": 1,
             "decision1Desc": "Shoot the snake!",
             "decision1": {
                 "resource": "Bullets",
@@ -291,7 +291,7 @@
                     "someoneDies": 1
                 }
             }
-     
-        
+
+
         }]
     }
