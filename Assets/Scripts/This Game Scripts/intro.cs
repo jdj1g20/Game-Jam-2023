@@ -11,7 +11,7 @@ public class intro : MonoBehaviour{
 
     public IEnumerator PlayIntro()
     {
-      string textToDisplay = "You are a rat cowboy traveling with your family to the great city of Mouseoury from your hometown of Orato.\n You are traveling with your ratson Ratz your ratwife Ratefer and your ratmom Ratmom \n you will need some food for the journey, tools to fix the wagon, bullets to deal with situations and money in the form of the glorious Cheesecoin.";
+      string textToDisplay = "You are a rat cowboy traveling with your family to the great city of Mouseoury from your hometown of Orato.\n You are journey with your ratson Ratz, your ratwife Ratefer and your rat mum, Ratmum. \n You will need to stock up on food to eat, tools to fix the wagon and bullets to deal with situations. It might be worth saving some money for the trip, in the form of the glorious Cheesecoin.";
         spaceDetected = false;
         Debug.Log("Playing text " + textToDisplay);
 
