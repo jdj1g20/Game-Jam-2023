@@ -38,12 +38,15 @@ public void addTraveler(){
 }
 
 public int calcLives(int Change){
-   int newV = Lives + Change;
-
+   int newV = Lives -  Change;
+   if(Change ==-1){
+     addTraveler();
+     return 0;
+   }
   if (newV < 0){
     return -1;
   }
-  Lives = Lives + Change;
+  Lives = Lives - Change;
   chooseSprite();
     return 0;
 }

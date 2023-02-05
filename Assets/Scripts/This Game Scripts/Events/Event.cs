@@ -13,7 +13,7 @@ public class Event
     // (i.e. The church wants us to sacrifice everyone to rat god. What do we do?)
     public string description;
     // Background image to display
-    public string background;
+    public int background;
 
     // The four decisions that appear after the description is read
     public Option decision1;
@@ -23,7 +23,7 @@ public class Event
     // Description to show on decision2 button
     public string decision2Desc;
     public Option decision3;
-    
+
     // Description to show on decision3 button
     public string decision3Desc;
     public Option decision4;

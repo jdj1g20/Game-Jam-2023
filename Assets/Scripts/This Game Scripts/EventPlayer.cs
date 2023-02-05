@@ -115,6 +115,9 @@ public class EventPlayer : MonoBehaviour
     }
     public void ContinueSelect() {
         Debug.Log("Selected continue button");
+        if(gameOver){
+          SceneMan.loadScene("EndScreen");
+        }else{
         if (dayEnd) {
             Debug.Log("Starting next event");
 
@@ -129,6 +132,7 @@ public class EventPlayer : MonoBehaviour
             wagon.chooseSprite();
             BackroundSelect(0);
             PlayDayEnd();
+        }
         }
     }
     public void BackroundSelect(int inn){
@@ -165,7 +169,7 @@ public class EventPlayer : MonoBehaviour
         if (dysenteryChance < 0.05f) {
             Debug.Log("O no someone died of dysentery");
             wagon.Lives -= 1;
-            if (wagon.Lives > 0) {
+            if (wagon.Lives <= 0) {
                 dayEndText += "You died of dysentery. Good job.";
                 gameOver = true;
                 StartCoroutine(initialTextBoxText.NewTextToDisplay(dayEndText));
@@ -309,6 +313,7 @@ public class EventPlayer : MonoBehaviour
         } else {
             Debug.Log("Everyone is ded");
             gameOver = true;
+
         }
         Debug.Log("lives after event: " + wagon.Lives);
         StartCoroutine(initialTextBoxText.NewTextToDisplay(outcomeText));
