@@ -706,6 +706,7 @@ MonoBehaviour:
         finalDescription: 
         someoneDies: 0
     decision4Desc: 
+  sprtldr: {fileID: 913077283}
   inventory: {fileID: 0}
   wagon: {fileID: 1304746941}
   playingOutcome: 0

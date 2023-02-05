@@ -43,7 +43,7 @@ public class EventPlayer : MonoBehaviour
         initialTextBox.SetActive(true);
 
         string backgroundText = eventToPlay.description;
-        //sprtldr.SetScene("Traveler");//eventToPlay.sceneName);
+        sprtldr.SetScene("Traveler");
         Debug.Log("Calling initial text box text with " + backgroundText);
         StartCoroutine(initialTextBoxText.NewTextToDisplay(backgroundText));
 
