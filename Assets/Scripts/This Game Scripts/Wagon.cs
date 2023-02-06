@@ -57,25 +57,32 @@ public void chooseSprite(){
   if(Traveler){
     life = life -1;
    }
-   travelerObj.SetActive(Traveler&&displayBool);
-   dispObj.SetActive(displayBool);
-  switch (life){
-    case 1:
-    spriterender.sprite = WagonSprite1;
-    break;
-    case 2:
-    spriterender.sprite = WagonSprite2;
-    break;
-    case 3:
-    spriterender.sprite = WagonSprite3;
-    break;
-    case 4:
-    spriterender.sprite = WagonSprite4;
-    break;
-    default:
-    spriterender.sprite = WagonSprite1;
-    break;
+   if (travelerObj != null) {
+    travelerObj.SetActive(Traveler&&displayBool);
+   }
+   if (dispObj != null) {
+    dispObj.SetActive(displayBool);
+   }
+   if (spriterender != null) {
+      switch (life){
+      case 1:
+      spriterender.sprite = WagonSprite1;
+      break;
+      case 2:
+      spriterender.sprite = WagonSprite2;
+      break;
+      case 3:
+      spriterender.sprite = WagonSprite3;
+      break;
+      case 4:
+      spriterender.sprite = WagonSprite4;
+      break;
+      default:
+      spriterender.sprite = WagonSprite1;
+      break;
 
+   }
+  
   }
 
 
